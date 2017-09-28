@@ -1,0 +1,29 @@
+[rosmaster.main][INFO] 2016-08-11 12:11:41,231: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2016-08-11 12:11:41,231: Starting ROS Master Node
+[xmlrpc][INFO] 2016-08-11 12:11:41,232: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2016-08-11 12:11:41,232: Started XML-RPC server [http://SMB303B:11311/]
+[xmlrpc][INFO] 2016-08-11 12:11:41,232: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2016-08-11 12:11:41,232: Master initialized: port[11311], uri[http://SMB303B:11311/]
+[rosmaster.master][INFO] 2016-08-11 12:11:41,314: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2016-08-11 12:11:41,315: +PARAM [/roslaunch/uris/host_smb303b__44744] by /roslaunch
+[rosmaster.master][INFO] 2016-08-11 12:11:41,365: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2016-08-11 12:11:41,365: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2016-08-11 12:11:41,373: +SERVICE [/rosout/get_loggers] /rosout http://SMB303B:38026/
+[rosmaster.master][INFO] 2016-08-11 12:11:41,374: +SERVICE [/rosout/set_logger_level] /rosout http://SMB303B:38026/
+[rosmaster.master][INFO] 2016-08-11 12:11:41,375: +PUB [/rosout_agg] /rosout http://SMB303B:38026/
+[rosmaster.master][INFO] 2016-08-11 12:11:41,380: +SUB [/rosout] /rosout http://SMB303B:38026/
+[rosmaster.master][INFO] 2016-08-11 12:11:41,501: +PUB [/rosout] /moveit_setup_assistant http://SMB303B:45616/
+[rosmaster.master][INFO] 2016-08-11 12:11:41,502: +SERVICE [/moveit_setup_assistant/get_loggers] /moveit_setup_assistant http://SMB303B:45616/
+[rosmaster.master][INFO] 2016-08-11 12:11:41,503: +SERVICE [/moveit_setup_assistant/set_logger_level] /moveit_setup_assistant http://SMB303B:45616/
+[rosmaster.master][INFO] 2016-08-11 12:11:41,532: publisherUpdate[/rosout] -> http://SMB303B:38026/
+[rosmaster.master][INFO] 2016-08-11 12:11:49,745: -PUB [/rosout] /moveit_setup_assistant http://SMB303B:45616/
+[rosmaster.master][INFO] 2016-08-11 12:11:49,746: -SERVICE [/moveit_setup_assistant/get_loggers] /moveit_setup_assistant rosrpc://SMB303B:40248
+[rosmaster.master][INFO] 2016-08-11 12:11:49,747: -SERVICE [/moveit_setup_assistant/set_logger_level] /moveit_setup_assistant rosrpc://SMB303B:40248
+[rosmaster.master][INFO] 2016-08-11 12:11:49,844: publisherUpdate[/rosout] -> http://SMB303B:38026/
+[rosmaster.master][INFO] 2016-08-11 12:11:50,146: -PUB [/rosout_agg] /rosout http://SMB303B:38026/
+[rosmaster.master][INFO] 2016-08-11 12:11:50,147: -SUB [/rosout] /rosout http://SMB303B:38026/
+[rosmaster.master][INFO] 2016-08-11 12:11:50,148: -SERVICE [/rosout/get_loggers] /rosout rosrpc://SMB303B:39838
+[rosmaster.master][INFO] 2016-08-11 12:11:50,149: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://SMB303B:39838
+[rosmaster.main][INFO] 2016-08-11 12:11:50,210: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2016-08-11 12:11:50,210: stopping master...
+[rospy.core][INFO] 2016-08-11 12:11:50,211: signal_shutdown [atexit]

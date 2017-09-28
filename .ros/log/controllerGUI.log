@@ -1,0 +1,41 @@
+[rospy.client][INFO] 2016-08-11 14:14:43,244: init_node, name[/controllerGUI], pid[10342]
+[xmlrpc][INFO] 2016-08-11 14:14:43,245: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2016-08-11 14:14:43,245: Started XML-RPC server [http://SMB303B:33298/]
+[rospy.init][INFO] 2016-08-11 14:14:43,245: ROS Slave URI: [http://SMB303B:33298/]
+[rospy.impl.masterslave][INFO] 2016-08-11 14:14:43,246: _ready: http://SMB303B:33298/
+[rospy.registration][INFO] 2016-08-11 14:14:43,246: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2016-08-11 14:14:43,247: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2016-08-11 14:14:43,346: registered with master
+[rospy.rosout][INFO] 2016-08-11 14:14:43,346: initializing /rosout core topic
+[rospy.rosout][INFO] 2016-08-11 14:14:43,349: connected to core topic /rosout
+[rospy.simtime][INFO] 2016-08-11 14:14:43,351: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2016-08-11 14:14:43,458: No URDF defined, proceeding with defaults
+[rospy.internal][INFO] 2016-08-11 14:14:43,513: topic[/joint_states] adding connection to [http://SMB303B:37821/], count 0
+[rospy.internal][INFO] 2016-08-11 14:14:43,607: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2016-08-11 14:15:30,517: signal_shutdown [atexit]
+[rospy.internal][INFO] 2016-08-11 14:15:30,522: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2016-08-11 14:15:30,523: topic[/joint_states] removing connection to http://SMB303B:37821/
+[rospy.impl.masterslave][INFO] 2016-08-11 14:15:30,523: atexit
+[rospy.internal][WARNING] 2016-08-11 14:15:30,525: Unknown error initiating TCP/IP socket to SMB303B:38942 (http://SMB303B:37821/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.client][INFO] 2016-08-11 14:16:29,332: init_node, name[/controllerGUI], pid[10441]
+[xmlrpc][INFO] 2016-08-11 14:16:29,332: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2016-08-11 14:16:29,333: Started XML-RPC server [http://SMB303B:38143/]
+[rospy.init][INFO] 2016-08-11 14:16:29,333: ROS Slave URI: [http://SMB303B:38143/]
+[rospy.impl.masterslave][INFO] 2016-08-11 14:16:29,333: _ready: http://SMB303B:38143/
+[rospy.registration][INFO] 2016-08-11 14:16:29,334: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2016-08-11 14:16:29,334: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2016-08-11 14:16:29,433: registered with master
+[rospy.rosout][INFO] 2016-08-11 14:16:29,433: initializing /rosout core topic
+[rospy.rosout][INFO] 2016-08-11 14:16:29,436: connected to core topic /rosout
+[rospy.simtime][INFO] 2016-08-11 14:16:29,437: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2016-08-11 14:16:29,493: No URDF defined, proceeding with defaults
+[rospy.internal][INFO] 2016-08-11 14:16:29,549: topic[/joint_states] adding connection to [http://SMB303B:37821/], count 0
+[rospy.internal][INFO] 2016-08-11 14:16:29,652: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2016-08-11 14:16:50,766: signal_shutdown [atexit]
+[rospy.internal][INFO] 2016-08-11 14:16:50,772: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2016-08-11 14:16:50,772: topic[/joint_states] removing connection to http://SMB303B:37821/
+[rospy.impl.masterslave][INFO] 2016-08-11 14:16:50,772: atexit

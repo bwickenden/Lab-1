@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="keywords" content="leads, programmer, troubleshooting, explore, link, mismatch, problem, uploading, content, message, board, upload" />
+	<meta name="description" content="hello. i have been using my phantomx with the stock code for some time now, playing around with leg distances and fpv cams. 
+but today i decided to import the phoenix code again,when i tried to do that, i got errors. to my suprise, no code would upload to the arbotix, not even the arbotixblink.  
+the jumper is set to usb, the correct COM port is selected, aswell as the board. the xbee is removed. the uart will blik for a while, then the arduino gui will tell me that the code is uploaded, aswell" />
+	
+	<title> content mismatch? [Archive]  - Trossen Robotics Community</title>
+	<link rel="stylesheet" type="text/css" href="http://forums.trossenrobotics.com/archive/archive.css" />
+</head>
+<body>
+<div class="pagebody">
+<div id="navbar"><a href="http://forums.trossenrobotics.com/archive/index.php">Trossen Robotics Community</a> &gt; <a href="http://forums.trossenrobotics.com/archive/index.php/f-22.html">Robotics</a> &gt; <a href="http://forums.trossenrobotics.com/archive/index.php/f-21.html">Software and Programming</a> &gt;  content mismatch?</div>
+<hr />
+<div class="pda"><a href="http://forums.trossenrobotics.com/archive/index.php/t-6736.html?pda=1" rel="nofollow">PDA</a></div>
+<p class="largefont">View Full Version : <a href="http://forums.trossenrobotics.com/showthread.php?6736-content-mismatch">content mismatch?</a></p>
+<hr />
+<div class="floatcontainer">  </div><br />
+<div class="post"><div class="posttop"><div class="username">Thorbear.H</div><div class="date">03-01-2014, 09:07 AM</div></div><div class="posttext">hello. i have been using my phantomx with the stock code for some time now, playing around with leg distances and fpv cams.<br />
+but today i decided to import the phoenix code again,when i tried to do that, i got errors. to my suprise, no code would upload to the arbotix, not even the arbotixblink. <br />
+the jumper is set to usb, the correct COM port is selected, aswell as the board. the xbee is removed. the uart will blik for a while, then the arduino gui will tell me that the code is uploaded, aswell as this error:<br />
+<br />
+avrdude verification error first mismatch at byte 0x00020x7d ! =0xba <br />
+avrdude verification error : content mismatch<br />
+<br />
+i have done the whole instsaling proces again, installing the arduino, the cdm, and the rest of the files.<br />
+can anyone point me in the rigth direction here?</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">KurtEck</div><div class="date">03-01-2014, 09:56 AM</div></div><div class="posttext">Some of the mistakes I have done in the past that hurt include many of the things it sounds like you tried:<br />
+1) Low power - Try with fully charged battery - Probably not the issue as you mentioned USB<br />
+2) XBee installed - Sounds like you removed xbee.<br />
+3) Wrong Comm port - Sounds like you checked this<br />
+4) Try to program with FTDI, but previously programmed with ISP and did not have bootloader installed. - Fix is to use ISP again, to either program the board or to download bootloader.<br />
+5) Wrong command -  I start getting into automatic mode, where if I have been uploading programs with a programmer and now using bootloader, but I still issue the upload using programmer (ctrl+shift+u) versus standard upload (ctrl+u)<br />
+6) Reset Enable jumper - Not sure if you are using Older or newer Arbotix (I don't have any newer), but at least on the older Arbotix boards there is a jumper (reset enable), that allows the system to automatically reset the board to program.  If you don't have this jumper set, you can jumper it again, or you can reset the board manually.  That is on some boards I will hold the reset button in, wait until the compiler says, starting download and then I release the button.<br />
+<br />
+7) Your FTDI adapter has stopped working.  For awhile I had one of the USB to XBee adapters that also connected up as FTDI programmer (like: http://www.trossenrobotics.com/uartsbee).  Not sure if this is still the same one or not.   Mine just plain stopped working.   So I went back to using other adapters.  Hope this is not your case.<br />
+<br />
+Good Luck<br />
+Kurt<br />
+<br />
+Edit: 0) Forgot to mention - double check wiring.  make sure not off by one pin or cables reversed...</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Thorbear.H</div><div class="date">03-01-2014, 12:58 PM</div></div><div class="posttext">thank for your response.<br />
+i have now tried:<br />
+moving jumper, and using usb power instead of 12v adapter.<br />
+i only have the ftdi unit that came in the kit, so i cannot use other methots of uploading.<br />
+i am using the arbotix m. it does have a reset jumper. acording to the arbotix-m hardware overview, this enables the arduino ide to reset and overwrite existing code. as it is plugged in, it should not be the source of my problem.<br />
+<br />
+i have done an observation: if i i perform a standard upload, it will upload, but get the said error. if i upload using programmer, the progressbar will move rapidly, until it stops, and no activity is seen. if i then click upload again wile the progressbar is standing still, i will get the warning: com port 4 is already in use. this makes me assume that even though the bar is standing still, some sort of uploading is ocuring, since the port is used?</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Thorbear.H</div><div class="date">03-01-2014, 01:00 PM</div></div><div class="posttext">oh, and i also get the: ''problem uploading to board'' message, when using the upload via programmer. it leads me to a troubleshooting link, which i will explore now.</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">KurtEck</div><div class="date">03-01-2014, 01:22 PM</div></div><div class="posttext">Note: You should only using programmer if you are actually using a programmer like the one they sell at Trossen:http://www.trossenrobotics.com/p/USB-AVR-Programmer.aspx<br />
+<br />
+If you were using a programmer, I would also then tell you to check the programmer settings (Tools/Programmer).<br />
+<br />
+Also when you say you removed the XBee, I assume this implies that the USARTXBEE, that there is no xbee installed in it and there is no XBee on your Arbotix-m board.</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Thorbear.H</div><div class="date">03-01-2014, 03:23 PM</div></div><div class="posttext">yes i know, i use the uartsbee, and upload using ctrl and u. the xbee's are removed from both units.</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">KurtEck</div><div class="date">03-01-2014, 05:38 PM</div></div><div class="posttext">Should mention when my Uartsxbee failed to program, it also failed as a USB XBee adapter to my PC.  So to eliminate that as a potential problem, you might try to see if your adapter with an XBee in it will talk to your pc using something like X-CTU (digi)</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Thorbear.H</div><div class="date">03-02-2014, 04:11 AM</div></div><div class="posttext">the x.ctu did find the xbee using the uartsxbee. so the unit should not be defective.</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">kgranat</div><div class="date">03-03-2014, 10:31 AM</div></div><div class="posttext">Hi Thorbear<br />
+<br />
+I'd like to take a look at your unit. I'll arrange for a replacement board and a UPS label for you to send the board back to us. I'll PM you about it, or you can e-mail me, kyle@trossenrobotics.com</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Paul V</div><div class="date">03-03-2014, 11:28 PM</div></div><div class="posttext">Also, a quick check if you're using the UartSBEE - check the tiny little voltage switch and make sure it's on 5V (which is used for programming / communicating with the ArbotiX) not 3.3V (used to program / communicate with the XBees).  Sending the wrong voltage is likely to result in the receiver misreading the data.<br />
+<br />
+Also make sure you didn't put the FTDI cable on backwards on either end :D  the curse of nonpolarized connectors is that they are subject to Murphy's Law.</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">electricmotorcycles</div><div class="date">03-08-2014, 12:53 PM</div></div><div class="posttext">i am having a similar issue, however, i have yet to upload anything to my phantom hex, i've been attempting to get the blink to upload [i took a while for me to realize i had to remove the xbee] i've tried everything listed in this post but i'm getting the following error:<br />
+<br />
+avrdude: verification error, first mismatch at byte 0x0002<br />
+         0x7d != 0x80<br />
+avrdude: verification error; content mismatch</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Thorbear.H</div><div class="date">04-17-2014, 01:51 PM</div></div><div class="posttext">just wanted to notice you: i recieved my replacement board now, great service from kyle. he even threw in some extra useful parts :)</div></div><hr />
+
+ 
+<div id="copyright">Powered by vBulletin&reg; Version 4.2.3 Copyright &copy; 2017 vBulletin Solutions, Inc. All rights reserved.</div>
+</div>
+</body>
+</html>c$r!«Ì      X„ÃªX„Ãª=ù'Ç       @    :http://forums.trossenrobotics.com/archive/index.php/t-6736.html necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Tue, 04 Apr 2017 15:33:22 GMT
+Server: Apache/2.4.17 (Unix) OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4
+X-Powered-By: PHP/5.5.30
+Cache-Control: private
+Pragma: private
+Content-Type: text/html; charset=UTF-8
+ original-response-headers Date: Tue, 04 Apr 2017 15:33:22 GMT
+Server: Apache/2.4.17 (Unix) OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4
+X-Powered-By: PHP/5.5.30
+Cache-Control: private
+Pragma: private
+Set-Cookie: bb_lastactivity=0; expires=Wed, 04-Apr-2018 15:33:23 GMT; Max-Age=31536000; path=/
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 1 predictor::http://forums.trossenrobotics.com/archive/archive.css 1,2,1491324091,12289 net-response-time-onstart 400 net-response-time-onstop 440   &|

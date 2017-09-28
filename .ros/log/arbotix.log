@@ -1,0 +1,118 @@
+[rospy.client][INFO] 2016-08-11 14:03:31,678: init_node, name[/arbotix], pid[9679]
+[xmlrpc][INFO] 2016-08-11 14:03:31,678: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2016-08-11 14:03:31,678: Started XML-RPC server [http://SMB303B:41692/]
+[rospy.init][INFO] 2016-08-11 14:03:31,678: ROS Slave URI: [http://SMB303B:41692/]
+[rospy.impl.masterslave][INFO] 2016-08-11 14:03:31,679: _ready: http://SMB303B:41692/
+[rospy.registration][INFO] 2016-08-11 14:03:31,679: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2016-08-11 14:03:31,679: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2016-08-11 14:03:31,779: registered with master
+[rospy.rosout][INFO] 2016-08-11 14:03:31,779: initializing /rosout core topic
+[rospy.registration][ERROR] 2016-08-11 14:03:31,780: [Errno 111] Connection refused
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+[rospy.core][INFO] 2016-08-11 14:03:34,455: signal_shutdown [signal-2]
+[rospy.registration][WARNING] 2016-08-11 14:03:34,455: cannot unregister with master due to network issues
+[rospy.impl.masterslave][INFO] 2016-08-11 14:03:34,456: signal-2
+[rospy.rosout][INFO] 2016-08-11 14:03:34,620: connected to core topic /rosout
+[rospy.simtime][ERROR] 2016-08-11 14:03:34,648: Unable to initialize /clock: [Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/simtime.py", line 79, in init_simtime
+    if not _is_use_simtime():
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/simtime.py", line 60, in _is_use_simtime
+    code, msg, val = m.getParam(rospy.names.get_caller_id(), _USE_SIMTIME)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1233, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1587, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1273, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1301, in single_request
+    self.send_content(h, request_body)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1448, in send_content
+    connection.endheaders(request_body)
+  File "/usr/lib/python2.7/httplib.py", line 975, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 835, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 797, in send
+    self.connect()
+  File "/usr/lib/python2.7/httplib.py", line 778, in connect
+    self.timeout, self.source_address)
+  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+
+[rospy.core][INFO] 2016-08-11 14:03:34,649: signal_shutdown [atexit]
+[rospy.client][INFO] 2016-08-11 14:03:43,129: init_node, name[/arbotix], pid[9771]
+[xmlrpc][INFO] 2016-08-11 14:03:43,129: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2016-08-11 14:03:43,130: Started XML-RPC server [http://SMB303B:38580/]
+[rospy.init][INFO] 2016-08-11 14:03:43,130: ROS Slave URI: [http://SMB303B:38580/]
+[rospy.impl.masterslave][INFO] 2016-08-11 14:03:43,130: _ready: http://SMB303B:38580/
+[rospy.registration][INFO] 2016-08-11 14:03:43,131: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2016-08-11 14:03:43,131: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2016-08-11 14:03:43,230: registered with master
+[rospy.rosout][INFO] 2016-08-11 14:03:43,230: initializing /rosout core topic
+[rospy.rosout][INFO] 2016-08-11 14:03:43,232: connected to core topic /rosout
+[rospy.simtime][INFO] 2016-08-11 14:03:43,234: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2016-08-11 14:03:43,496: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2016-08-11 14:03:44,251: Started ArbotiX connection on port /dev/ttyUSB0.
+[rosout][INFO] 2016-08-11 14:03:44,262: ArbotiX connected.
+[rospy.core][INFO] 2016-08-11 14:07:34,373: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2016-08-11 14:07:34,380: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2016-08-11 14:07:34,380: signal-2
+[rospy.core][INFO] 2016-08-11 14:07:34,512: signal_shutdown [atexit]
+[rospy.client][INFO] 2016-08-11 14:07:35,590: init_node, name[/arbotix], pid[10166]
+[xmlrpc][INFO] 2016-08-11 14:07:35,591: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2016-08-11 14:07:35,591: Started XML-RPC server [http://SMB303B:39223/]
+[rospy.init][INFO] 2016-08-11 14:07:35,591: ROS Slave URI: [http://SMB303B:39223/]
+[rospy.impl.masterslave][INFO] 2016-08-11 14:07:35,591: _ready: http://SMB303B:39223/
+[rospy.registration][INFO] 2016-08-11 14:07:35,592: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2016-08-11 14:07:35,592: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2016-08-11 14:07:35,692: registered with master
+[rospy.rosout][INFO] 2016-08-11 14:07:35,692: initializing /rosout core topic
+[rospy.rosout][INFO] 2016-08-11 14:07:35,694: connected to core topic /rosout
+[rospy.simtime][INFO] 2016-08-11 14:07:35,695: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2016-08-11 14:07:35,916: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2016-08-11 14:07:36,716: Started ArbotiX connection on port /dev/ttyUSB0.
+[rosout][INFO] 2016-08-11 14:07:36,727: ArbotiX connected.
+[rospy.core][INFO] 2016-08-11 14:07:43,333: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2016-08-11 14:07:43,340: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2016-08-11 14:07:43,340: signal-2
+[rospy.core][INFO] 2016-08-11 14:07:43,472: signal_shutdown [atexit]
+[rospy.client][INFO] 2016-08-11 14:07:46,332: init_node, name[/arbotix], pid[10211]
+[xmlrpc][INFO] 2016-08-11 14:07:46,332: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2016-08-11 14:07:46,333: Started XML-RPC server [http://SMB303B:37821/]
+[rospy.init][INFO] 2016-08-11 14:07:46,333: ROS Slave URI: [http://SMB303B:37821/]
+[rospy.impl.masterslave][INFO] 2016-08-11 14:07:46,333: _ready: http://SMB303B:37821/
+[rospy.registration][INFO] 2016-08-11 14:07:46,334: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2016-08-11 14:07:46,334: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2016-08-11 14:07:46,433: registered with master
+[rospy.rosout][INFO] 2016-08-11 14:07:46,433: initializing /rosout core topic
+[rospy.rosout][INFO] 2016-08-11 14:07:46,435: connected to core topic /rosout
+[rospy.simtime][INFO] 2016-08-11 14:07:46,437: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2016-08-11 14:07:46,732: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2016-08-11 14:07:47,456: Started ArbotiX connection on port /dev/ttyUSB0.
+[rosout][INFO] 2016-08-11 14:07:47,467: ArbotiX connected.
+[rospy.internal][INFO] 2016-08-11 14:14:43,518: topic[/joint_states] adding connection to [/controllerGUI], count 0
+[rospy.internal][INFO] 2016-08-11 14:15:30,524: topic[/joint_states] adding connection to [/controllerGUI], count 1
+[rospy.internal][INFO] 2016-08-11 14:15:30,525: topic[/joint_states] removing connection to /controllerGUI
+[rospy.internal][INFO] 2016-08-11 14:15:30,648: topic[/joint_states] removing connection to /controllerGUI
+[rospy.internal][INFO] 2016-08-11 14:15:47,139: topic[/joint_states] adding connection to [/rostopic_10383_1470921346923], count 0
+[rosout][WARNING] 2016-08-11 14:15:53,567: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2016-08-11 14:15:53,568: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 365, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rospy.internal][INFO] 2016-08-11 14:15:53,738: topic[/joint_states] removing connection to /rostopic_10383_1470921346923
+[rospy.internal][INFO] 2016-08-11 14:16:08,706: topic[/diagnostics] adding connection to [/rostopic_10418_1470921368503], count 0
+[rospy.internal][INFO] 2016-08-11 14:16:14,278: topic[/diagnostics] removing connection to /rostopic_10418_1470921368503
+[rospy.internal][INFO] 2016-08-11 14:16:29,552: topic[/joint_states] adding connection to [/controllerGUI], count 0
+[rospy.internal][INFO] 2016-08-11 14:16:50,898: topic[/joint_states] removing connection to /controllerGUI
+[rospy.core][INFO] 2016-08-11 14:29:10,652: signal_shutdown [signal-2]
+[rospy.registration][WARNING] 2016-08-11 14:29:10,653: cannot unregister with master due to network issues
+[rospy.internal][INFO] 2016-08-11 14:29:10,653: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2016-08-11 14:29:10,653: signal-2
+[rospy.core][INFO] 2016-08-11 14:29:11,268: signal_shutdown [atexit]

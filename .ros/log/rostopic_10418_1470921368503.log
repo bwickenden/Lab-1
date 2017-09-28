@@ -1,0 +1,18 @@
+[rospy.client][INFO] 2016-08-11 14:16:08,534: init_node, name[/rostopic_10418_1470921368503], pid[10418]
+[xmlrpc][INFO] 2016-08-11 14:16:08,535: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2016-08-11 14:16:08,535: Started XML-RPC server [http://SMB303B:41088/]
+[rospy.init][INFO] 2016-08-11 14:16:08,535: ROS Slave URI: [http://SMB303B:41088/]
+[rospy.impl.masterslave][INFO] 2016-08-11 14:16:08,536: _ready: http://SMB303B:41088/
+[rospy.registration][INFO] 2016-08-11 14:16:08,536: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2016-08-11 14:16:08,536: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2016-08-11 14:16:08,636: registered with master
+[rospy.rosout][INFO] 2016-08-11 14:16:08,636: initializing /rosout core topic
+[rospy.rosout][INFO] 2016-08-11 14:16:08,638: connected to core topic /rosout
+[rospy.simtime][INFO] 2016-08-11 14:16:08,640: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2016-08-11 14:16:08,703: topic[/diagnostics] adding connection to [http://SMB303B:37821/], count 0
+[rospy.internal][INFO] 2016-08-11 14:16:08,924: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2016-08-11 14:16:12,522: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2016-08-11 14:16:12,526: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2016-08-11 14:16:12,526: topic[/diagnostics] removing connection to http://SMB303B:37821/
+[rospy.impl.masterslave][INFO] 2016-08-11 14:16:12,527: signal-2
+[rospy.core][INFO] 2016-08-11 14:16:12,691: signal_shutdown [atexit]

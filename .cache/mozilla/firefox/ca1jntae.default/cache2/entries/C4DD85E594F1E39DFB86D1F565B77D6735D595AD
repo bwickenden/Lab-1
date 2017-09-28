@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4" />
+<link rel="shortcut icon" href="/custom/favicon.ico" type="image/ico" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/custom/js/sorttable.js"></script>
+<script type="text/javascript" src="/custom/libraries/jquery.min.js"></script>                         
+<script type="text/javascript" src="/custom/js/seesaw.js"></script> 
+<script type="text/javascript" src="/custom/js/rosversion.js"></script> 
+<!--script type="text/javascript" src="/custom/libraries/RGraph.common.core.js" ></script Used for metrics only, should be conditional, not at the top-->
+<!--script type="text/javascript" src="/custom/libraries/RGraph.bar.js" ></script same as above -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17821189-2']);
+  _gaq.push(['_setDomainName', 'wiki.ros.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>arbotix - ROS Wiki</title>
+<script type="text/javascript" src="/moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/rostheme/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/moin_static197/rostheme/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/moin_static197/rostheme/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/moin_static197/rostheme/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/rostheme/css/msie.css">
+<![endif]-->
+
+
+
+
+<link rel="canonical" href="http://wiki.ros.org/arbotix" />
+
+<link rel="Start" href="/Documentation">
+<link rel="Alternate" title="Wiki Markup" href="/arbotix?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/arbotix?action=print">
+<link rel="Appendix" title="arbotix.jpeg" href="/arbotix?action=AttachFile&amp;do=view&amp;target=arbotix.jpeg">
+<link rel="Appendix" title="controllerGUI.png" href="/arbotix?action=AttachFile&amp;do=view&amp;target=controllerGUI.png">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5950817-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+if(f) f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+if(e) {
+  searchChange(e);
+  searchBlur(e);
+}
+
+function handleSubmit() {
+  var f = document.getElementById('searchform');
+  var t = document.getElementById('searchinput');
+  var r = document.getElementById('real_searchinput');
+  
+  //alert("handleSubmit "+ t.value);
+  if(t.value.match(/review/)) {
+    r.value = t.value;
+  } else {
+    //r.value = t.value + " -PackageReviewCategory -StackReviewCategory -M3Review -DocReview -ApiReview -HelpOn -BadContent -LocalSpellingWords";
+    r.value = t.value + " -PackageReviewCategory -StackReviewCategory -DocReview -ApiReview";
+  }
+  //return validate(f);
+}
+//-->
+</script>
+
+<div id="dpage">
+  <div id="dpage-inner">
+    <div id="header"><div id="topnav">
+
+<!-- Alert box -->
+<!-- To enable the alert box uncomment the block below. Change the alert_box_name to a new name. Then update the content below the button. -->
+<!-- Disabling alert box
+    <div class="alert alert-info alert-dismissable" style="text-align: center;">
+<script>
+jQuery(function( $ ){
+    alert_box_name = 'roswiki_roscon2016_early_registration_last_day'
+    state = localStorage.getItem(alert_box_name);
+    if (!state) {
+      localStorage.setItem(alert_box_name, 'open');
+    }
+    state = localStorage.getItem(alert_box_name);
+    if (state == 'closed') {
+        $( '#topnav .alert' ).hide();
+    }
+    $( '.close' ).click(function () {
+	console.log('in .close.click');
+        localStorage.setItem(alert_box_name, 'closed');
+        $( '#topnav .alert' ).hide();
+  });
+});
+</script>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      Early registration for <a href="http://roscon.ros.org/2016">ROSCon 2016</a> ends today, August 26th! <br><a href="https://events.osrfoundation.org/roscon-2016-registration/">Register now</a> to get the early registration discount. And <a href="http://conradhotels.hilton.com/en/ch/groups/personalized/S/SELCICI-GROSA-20161003/index.jhtml?WT.mc_id=POG">book you discounted hotel rooms</a> at our <a href="http://roscon.ros.org/2016/#location">discounted rates</a>.
+    </div>
+ End disabling alert box -->
+<!-- End Alert box -->
+
+      <table id="topnav-table">
+        <tr>
+          <td width="300" valign="top"><a href="/"><img border="0" src="/custom/images/ros_org.png" alt="ros.org" width="238" height="51"/></a></td>
+          <td valign="middle">
+            <a href="http://www.ros.org/about-ros">About</a>
+            |
+            <a href="/Support">Support</a>
+            |
+            <a href="http://status.ros.org/">Status</a>
+            |
+            <a href="http://answers.ros.org/">answers.ros.org</a>
+
+<!--<a href="http://roscon.ros.org/2016/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/roscon_wiki_header.jpg" width="133" height="65" alt="ROSCon 2016" /></a>
+-->
+
+<!-- <a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/ros_kong_2014_badge.png" width="133" height="38" alt="roskong" /></a>
+-->
+<!--a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://imgur.com/eMzUJVe.png" width="133" height="38" alt="roskong" /></a-->
+          </td>
+
+          <td valign="middle" align="right">
+
+<script language="Javascript">
+
+function Searchy(theButton){
+
+theForm = theButton.form;
+newID = theForm.input.value;
+theForm.q.value = newID;
+theForm.input.value=theForm.input.value
+
+}
+</script>
+
+
+<form action="http://www.ros.org/search/index.html" id="cse">
+  <div>
+    <label>Search:</label>
+    <input type="hidden" name="cx" value="018259903093183594226:txvzw9fat6w" />
+    <input type="hidden" name="cof" value="FORID:11;NB:1" />
+    <input type="hidden" name="filter" value="0" />
+    <input type="hidden" name="num" value="10" />
+
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="input" id="input" autocomplete="on" style="width: 35%"/>
+    <input type="hidden" name="q" value="" />
+    <input type="submit" name="sa" value="Submit" onClick="Searchy(this)"/>
+
+  </div>
+</form>
+
+         </td>
+      </tr>
+      <tr>
+        <td colspan="3" height="53" width="1024"><nobr><img src="/custom/images/menu_left.png" width="17" height="53" alt=""/><a href="/"><img
+        border="0" src="/custom/images/menu_documentation.png" width="237" height="53" alt="Documentation" /></a><img
+        src="/custom/images/menu_spacer.png" width="69" height="53" /><a href="http://www.ros.org/browse/"><img border="0"
+        src="/custom/images/menu_browse_software.png" width="268" height="53" alt="Browse Software" /></a><img
+        src="/custom/images/menu_spacer.png" width="69" height="53" /><a href="http://www.ros.org/news"><img border="0"
+        src="/custom/images/menu_news.png" width="84" height="53" alt="News" /></a><img
+        src="/custom/images/menu_spacer.png" width="69" height="53" /><a href="/ROS/Installation"><img border="0"
+        src="/custom/images/menu_download.png" width="151" height="53" alt="Download" /></a><img
+        src="/custom/images/menu_right.png" width="60" height="53" /></nobr></td>
+
+      </tr>
+    </table> <!-- topnav-table -->
+
+    </div> <!-- /#topav -->
+  </div> <!-- /#header -->
+
+
+<div id="header2">
+
+<ul id="pagelocation">
+<li><a class="backlink" href="/action/fullsearch/arbotix?action=fullsearch&amp;context=180&amp;value=linkto%3A%22arbotix%22" rel="nofollow" title="Click to do a full-text search for this title">arbotix</a></li>
+</ul>
+
+<div id="locationline">
+</div>
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="/Distributions">Distributions</a></li><li class="wikilink"><a href="/ROS/Installation">ROS/Installation</a></li><li class="wikilink"><a href="/ROS/Tutorials">ROS/Tutorials</a></li><li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="current"><a href="/arbotix">arbotix</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="/action/info/arbotix?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="/action/AttachFile/arbotix?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/arbotix">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled class="disabled">Delete Cache</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="CopyPage">Copy Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="MyPages">My Pages</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="CreatePdfDocument">CreatePdfDocument</option>
+<option value="Load">Load</option>
+<option value="RawFile">RawFile</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="/action/login/arbotix?action=login" id="login" rel="nofollow">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" lang="en" dir="ltr">
+
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><p class="line867"><span id="rosversion_selector" class="btn-group">
+<button id="electric" class="btn btn-default" onClick="Version({show:['electric_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'electric'], hide:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'electric_and_older', 'fuerte', 'groovy', 'hydro', 'indigo', 'jade'], target_ros_distro:'electric'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';return false"> electric </button>
+<button id="fuerte" class="btn btn-default" onClick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'fuerte'], hide:['fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'electric_and_older', 'fuerte_and_older', 'electric', 'groovy', 'hydro', 'indigo', 'jade'], target_ros_distro:'fuerte'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';return false"> fuerte </button>
+<button id="groovy" class="btn btn-default" onClick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'groovy'], hide:['groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'electric', 'fuerte', 'hydro', 'indigo', 'jade'], target_ros_distro:'groovy'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';return false"> groovy </button>
+<button id="hydro" class="btn btn-default" onClick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'hydro'], hide:['hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'electric', 'fuerte', 'groovy', 'indigo', 'jade'], target_ros_distro:'hydro'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';return false"> hydro </button>
+<button id="indigo" class="btn btn-default" onClick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'indigo_and_older', 'jade_and_older', 'indigo'], hide:['indigo_and_newer', 'jade_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'jade'], target_ros_distro:'indigo'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('jade').style.background='#e6e6e6';document.getElementById('jade').style.color='#3e4f6e';return false"> indigo </button>
+<button id="jade" class="btn btn-default" onClick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'jade_and_newer', 'jade_and_older', 'jade'], hide:['jade_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'jade_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'indigo'], target_ros_distro:'jade'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';return false"> jade </button>
+
+
+</span><span style="text-align:left">&nbsp;&nbsp;<a href="javascript:toggleDocStatus()">Documentation Status</a></span><div id="doc_status" style="background:#CCCCCC;display:none;margin-top:0px;margin-bottom:0px;padding-top:0px"><ul style="padding-top:5px;margin-top:0px;margin-bottom:0px;padding-bottom:5px;"><li><b>electric:</b> <i>Documentation generated on March 01, 2013 at 02:05 PM</i></li><br><li><b>fuerte:</b> <i>Documentation generated on December 28, 2013 at 04:45 PM</i></li><br><li><b>groovy:</b> <i>Documentation generated on October 05, 2014 at 10:16 PM</i></li><br><li><b>hydro:</b> <i>Documentation generated on August 26, 2015 at 10:44 AM</i><span style="font-size:10px"> (<a href="http://jenkins.ros.org/job/doc-hydro-arbotix/">doc job</a>).</span></li><br><li><b>indigo:</b> <i>Documentation generated on March 08, 2016 at 12:59 PM</i><span style="font-size:10px"> (<a href="http://build.ros.org/view/Idoc/job/Idoc__arbotix__ubuntu_trusty_amd64">doc job</a>).</span></li><br><li><b>jade:</b> <i>Documentation generated on March 06, 2016 at 11:06 AM</i><span style="font-size:10px"> (<a href="http://build.ros.org/view/Jdoc/job/Jdoc__arbotix_ros__ubuntu_trusty_amd64">doc job</a>).</span></li><br><li><b>kinetic:</b> Cannot load information on <strong>name: arbotix, distro: kinetic</strong>, which means that it is not yet in our index. Please see <a href="http://wiki.ros.org/rosdistro/Tutorials/Indexing%20Your%20ROS%20Repository%20for%20Documentation%20Generation">this page</a> for information on how to submit your repository to our index.</li><br><li><b>lunar:</b> Cannot load information on <strong>name: arbotix, distro: lunar</strong>, which means that it is not yet in our index. Please see <a href="http://wiki.ros.org/rosdistro/Tutorials/Indexing%20Your%20ROS%20Repository%20for%20Documentation%20Generation">this page</a> for information on how to submit your repository to our index.</li><br></div><div class="version electric"><em><strong>arbotix</strong>: <a href="/arbotix_controllers?distro=electric">arbotix_controllers</a> | <a href="/arbotix_firmware?distro=electric">arbotix_firmware</a> | <a href="/arbotix_msgs?distro=electric">arbotix_msgs</a> | <a href="/arbotix_python?distro=electric">arbotix_python</a> | <a href="/arbotix_sensors?distro=electric">arbotix_sensors</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><a href="/arbotix/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:arbotix/page:1/">FAQ</a></li><li><a href="/arbotix/ChangeList">Change List</a></li><li><a class="nonexistent" href="/arbotix/Reviews">Reviews</a></li></ul><script type="text/javascript" src="/custom/js/roswiki.js"></script><strong><a href="#" onClick="toggleExpandable('electricdependencies-list'); return false;">Dependencies</a> (6)</strong><br /><div id="electricdependencies-list" style="display:none"><ul><li><a href="/common?distro=electric">common</a></li><li><a href="/common_msgs?distro=electric">common_msgs</a></li><li><a href="/control?distro=electric">control</a></li><li><a href="/geometry?distro=electric">geometry</a></li><li><a href="/ros?distro=electric">ros</a></li><li><a href="/ros_comm?distro=electric">ros_comm</a></li></ul></div><strong><a href="#" onClick="toggleExpandable('electricused-by-list'); return false;">Used by</a> (2)</strong><br /><div id="electricused-by-list" style="display:none"><ul><li><a class="nonexistent" href="/pi_tutorials?distro=electric">pi_tutorials</a></li><li><a href="/turtlebot_arm?distro=electric">turtlebot_arm</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span><p id="package-info">
+    This stack provides comprehensive access to the ArbotiX RoboController and associated peripherals. 
+  <p id="package-info-1"><ul><li>Author: Maintained by Michael Ferguson</li><li>License: BSD,</li><li>Source: svn <a href="https://vanadium-ros-pkg.googlecode.com/svn/trunk/arbotix">https://vanadium-ros-pkg.googlecode.com/svn/trunk/arbotix</a></li></ul></div>
+<div class="version fuerte"><em><strong>arbotix</strong>: <a href="/arbotix_controllers?distro=fuerte">arbotix_controllers</a> | <a href="/arbotix_firmware?distro=fuerte">arbotix_firmware</a> | <a href="/arbotix_msgs?distro=fuerte">arbotix_msgs</a> | <a href="/arbotix_python?distro=fuerte">arbotix_python</a> | <a href="/arbotix_sensors?distro=fuerte">arbotix_sensors</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><a href="/arbotix/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:arbotix/page:1/">FAQ</a></li><li><a href="/arbotix/ChangeList">Change List</a></li><li><a class="nonexistent" href="/arbotix/Reviews">Reviews</a></li></ul><script type="text/javascript" src="/custom/js/roswiki.js"></script><strong><a href="#" onClick="toggleExpandable('fuertedependencies-list'); return false;">Dependencies</a> (6)</strong><br /><div id="fuertedependencies-list" style="display:none"><ul><li><a href="/common?distro=fuerte">common</a></li><li><a href="/common_msgs?distro=fuerte">common_msgs</a></li><li><a href="/control?distro=fuerte">control</a></li><li><a href="/geometry?distro=fuerte">geometry</a></li><li><a href="/ros?distro=fuerte">ros</a></li><li><a href="/ros_comm?distro=fuerte">ros_comm</a></li></ul></div><strong><a href="#" onClick="toggleExpandable('fuerteused-by-list'); return false;">Used by</a> (4)</strong><br /><div id="fuerteused-by-list" style="display:none"><ul><li><a href="/maxwell?distro=fuerte">maxwell</a></li><li><a href="/mini_max?distro=fuerte">mini_max</a></li><li><a class="nonexistent" href="/pi_tutorials?distro=fuerte">pi_tutorials</a></li><li><a href="/turtlebot_arm?distro=fuerte">turtlebot_arm</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span><p id="package-info-2">
+    This stack provides comprehensive access to the ArbotiX RoboController and associated peripherals. 
+  <p id="package-info-3"><ul><li>Author: Maintained by Michael Ferguson</li><li>License: BSD,</li><li>Source: svn <a href="https://vanadium-ros-pkg.googlecode.com/svn/trunk/arbotix">https://vanadium-ros-pkg.googlecode.com/svn/trunk/arbotix</a></li></ul></div>
+<div class="version groovy"><em><strong>arbotix</strong>: <a href="/arbotix_controllers?distro=groovy">arbotix_controllers</a> | <a href="/arbotix_firmware?distro=groovy">arbotix_firmware</a> | <a href="/arbotix_msgs?distro=groovy">arbotix_msgs</a> | <a href="/arbotix_python?distro=groovy">arbotix_python</a> | <a href="/arbotix_sensors?distro=groovy">arbotix_sensors</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><a href="/arbotix/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:arbotix/page:1/">FAQ</a></li><li><a href="/arbotix/ChangeList">Change List</a></li><li><a class="nonexistent" href="/arbotix/Reviews">Reviews</a></li></ul><script type="text/javascript" src="/custom/js/roswiki.js"></script><strong><a href="#" onClick="toggleExpandable('groovydependencies-list'); return false;">Dependencies</a> (6)</strong><br /><div id="groovydependencies-list" style="display:none"><ul><li><a href="/arbotix_controllers?distro=groovy">arbotix_controllers</a></li><li><a href="/arbotix_firmware?distro=groovy">arbotix_firmware</a></li><li><a href="/arbotix_msgs?distro=groovy">arbotix_msgs</a></li><li><a href="/arbotix_python?distro=groovy">arbotix_python</a></li><li><a href="/arbotix_sensors?distro=groovy">arbotix_sensors</a></li><li><a href="/catkin?distro=groovy">catkin</a></li></ul></div><strong><a href="#" onClick="toggleExpandable('groovyused-by-list'); return false;">Used by</a> (2)</strong><br /><div id="groovyused-by-list" style="display:none"><ul><li><a href="/mini_max?distro=groovy">mini_max</a></li><li><a class="nonexistent" href="/pi_tutorials?distro=groovy">pi_tutorials</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Continuous integration</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span><p id="package-info-4">ArbotiX Drivers<p id="package-info-5"><ul><li>Maintainer status: developed</li><li>Maintainer: Michael Ferguson &lt;mike AT vanadiumlabs DOT com&gt;</li><li>Author: Michael Ferguson</li><li>License: BSD</li><li>Source: git <a href="https://github.com/vanadiumlabs/arbotix_ros">https://github.com/vanadiumlabs/arbotix_ros.git</a> (branch: groovy-devel)</li></ul></div>
+<div class="version hydro"><em><strong>arbotix</strong>: <a href="/arbotix_controllers?distro=hydro">arbotix_controllers</a> | <a href="/arbotix_firmware?distro=hydro">arbotix_firmware</a> | <a href="/arbotix_msgs?distro=hydro">arbotix_msgs</a> | <a href="/arbotix_python?distro=hydro">arbotix_python</a> | <a href="/arbotix_sensors?distro=hydro">arbotix_sensors</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><a href="/arbotix/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:arbotix/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/hydro/changelogs/arbotix/changelog.html">Changelog</a></li><li><a href="/arbotix/ChangeList">Change List</a></li><li><a class="nonexistent" href="/arbotix/Reviews">Reviews</a></li></ul><script type="text/javascript" src="/custom/js/roswiki.js"></script><strong><a href="#" onClick="toggleExpandable('hydrodependencies-list'); return false;">Dependencies</a> (6)</strong><br /><div id="hydrodependencies-list" style="display:none"><ul><li><a href="/arbotix_controllers?distro=hydro">arbotix_controllers</a></li><li><a href="/arbotix_firmware?distro=hydro">arbotix_firmware</a></li><li><a href="/arbotix_msgs?distro=hydro">arbotix_msgs</a></li><li><a href="/arbotix_python?distro=hydro">arbotix_python</a></li><li><a href="/arbotix_sensors?distro=hydro">arbotix_sensors</a></li><li><a href="/catkin?distro=hydro">catkin</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span><p id="package-info-6">ArbotiX Drivers<p id="package-info-7"><ul><li>Maintainer status: maintained</li><li>Maintainer: Michael Ferguson &lt;mike AT vanadiumlabs DOT com&gt;</li><li>Author: Michael Ferguson</li><li>License: BSD</li><li>Source: git <a href="https://github.com/vanadiumlabs/arbotix_ros">https://github.com/vanadiumlabs/arbotix_ros.git</a> (branch: hydro-devel)</li></ul></div>
+<div class="version indigo"><em><strong>arbotix</strong>: <a href="/arbotix_controllers?distro=indigo">arbotix_controllers</a> | <a href="/arbotix_firmware?distro=indigo">arbotix_firmware</a> | <a href="/arbotix_msgs?distro=indigo">arbotix_msgs</a> | <a href="/arbotix_python?distro=indigo">arbotix_python</a> | <a href="/arbotix_sensors?distro=indigo">arbotix_sensors</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><a href="/arbotix/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:arbotix/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/indigo/changelogs/arbotix/changelog.html">Changelog</a></li><li><a href="/arbotix/ChangeList">Change List</a></li><li><a class="nonexistent" href="/arbotix/Reviews">Reviews</a></li></ul><script type="text/javascript" src="/custom/js/roswiki.js"></script><strong><a href="#" onClick="toggleExpandable('indigodependencies-list'); return false;">Dependencies</a> (6)</strong><br /><div id="indigodependencies-list" style="display:none"><ul><li><a href="/arbotix_controllers?distro=indigo">arbotix_controllers</a></li><li><a href="/arbotix_firmware?distro=indigo">arbotix_firmware</a></li><li><a href="/arbotix_msgs?distro=indigo">arbotix_msgs</a></li><li><a href="/arbotix_python?distro=indigo">arbotix_python</a></li><li><a href="/arbotix_sensors?distro=indigo">arbotix_sensors</a></li><li><a href="/catkin?distro=indigo">catkin</a></li></ul></div><script type="text/javascript" src="/custom/js/roswiki.js"></script><strong><a href="#" onClick="toggleExpandableJenkins('stack-indigojenkins-list'); return false;">Jenkins jobs</a> (8)</strong><br /><div id="stack-indigojenkins-list" style="display:none"><ul><li><a href="http://build.ros.org/view/Isrc_uT/job/Isrc_uT__arbotix__ubuntu_trusty__source">source ubuntu trusty</a></li><li><a href="http://build.ros.org/view/Isrc_uS/job/Isrc_uS__arbotix__ubuntu_saucy__source">source ubuntu saucy</a></li><li><a href="http://build.ros.org/view/Ibin_arm_uThf/job/Ibin_arm_uThf__arbotix__ubuntu_trusty_armhf__binary">binary ubuntu trusty armhf</a></li><li><a href="http://build.ros.org/view/Ibin_uS32/job/Ibin_uS32__arbotix__ubuntu_saucy_i386__binary">binary ubuntu saucy i386</a></li><li><a href="http://build.ros.org/view/Ibin_uS64/job/Ibin_uS64__arbotix__ubuntu_saucy_amd64__binary">binary ubuntu saucy amd64</a></li><li><a href="http://build.ros.org/view/Ibin_uT32/job/Ibin_uT32__arbotix__ubuntu_trusty_i386__binary">binary ubuntu trusty i386</a></li><li><a href="http://build.ros.org/view/Ibin_uT64/job/Ibin_uT64__arbotix__ubuntu_trusty_amd64__binary">binary ubuntu trusty amd64</a></li><li><a href="http://build.ros.org/view/Idoc/job/Idoc__arbotix__ubuntu_trusty_amd64">doc</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span><p id="package-info-8">ArbotiX Drivers<p id="package-info-9"><ul><li>Maintainer status: maintained</li><li>Maintainer: Michael Ferguson &lt;mike AT vanadiumlabs DOT com&gt;</li><li>Author: Michael Ferguson</li><li>License: BSD</li><li>Source: git <a href="https://github.com/vanadiumlabs/arbotix_ros">https://github.com/vanadiumlabs/arbotix_ros.git</a> (branch: indigo-devel)</li></ul></div>
+<div class="version jade"><em><strong>arbotix</strong>: <a href="/arbotix_controllers?distro=jade">arbotix_controllers</a> | <a href="/arbotix_firmware?distro=jade">arbotix_firmware</a> | <a href="/arbotix_msgs?distro=jade">arbotix_msgs</a> | <a href="/arbotix_python?distro=jade">arbotix_python</a> | <a href="/arbotix_sensors?distro=jade">arbotix_sensors</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><a href="/arbotix/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:arbotix/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/jade/changelogs/arbotix/changelog.html">Changelog</a></li><li><a class="nonexistent" href="/arbotix_ros/ChangeList">Change List</a></li><li><a class="nonexistent" href="/arbotix/Reviews">Reviews</a></li></ul><script type="text/javascript" src="/custom/js/roswiki.js"></script><strong><a href="#" onClick="toggleExpandable('jadedependencies-list'); return false;">Dependencies</a> (6)</strong><br /><div id="jadedependencies-list" style="display:none"><ul><li><a href="/arbotix_controllers?distro=jade">arbotix_controllers</a></li><li><a href="/arbotix_firmware?distro=jade">arbotix_firmware</a></li><li><a href="/arbotix_msgs?distro=jade">arbotix_msgs</a></li><li><a href="/arbotix_python?distro=jade">arbotix_python</a></li><li><a href="/arbotix_sensors?distro=jade">arbotix_sensors</a></li><li><a href="/catkin?distro=jade">catkin</a></li></ul></div><script type="text/javascript" src="/custom/js/roswiki.js"></script><strong><a href="#" onClick="toggleExpandableJenkins('stack-jadejenkins-list'); return false;">Jenkins jobs</a> (12)</strong><br /><div id="stack-jadejenkins-list" style="display:none"><ul><li><a href="http://build.ros.org/view/Jsrc_uT/job/Jsrc_uT__arbotix__ubuntu_trusty__source">source ubuntu trusty</a></li><li><a href="http://build.ros.org/view/Jsrc_uU/job/Jsrc_uU__arbotix__ubuntu_utopic__source">source ubuntu utopic</a></li><li><a href="http://build.ros.org/view/Jsrc_uV/job/Jsrc_uV__arbotix__ubuntu_vivid__source">source ubuntu vivid</a></li><li><a href="http://build.ros.org/view/Jbin_arm_uThf/job/Jbin_arm_uThf__arbotix__ubuntu_trusty_armhf__binary">binary ubuntu trusty armhf</a></li><li><a href="http://build.ros.org/view/Jbin_uT64/job/Jbin_uT64__arbotix__ubuntu_trusty_amd64__binary">binary ubuntu trusty amd64</a></li><li><a href="http://build.ros.org/view/Jbin_uT32/job/Jbin_uT32__arbotix__ubuntu_trusty_i386__binary">binary ubuntu trusty i386</a></li><li><a href="http://build.ros.org/view/Jbin_uU64/job/Jbin_uU64__arbotix__ubuntu_utopic_amd64__binary">binary ubuntu utopic amd64</a></li><li><a href="http://build.ros.org/view/Jbin_uU32/job/Jbin_uU32__arbotix__ubuntu_utopic_i386__binary">binary ubuntu utopic i386</a></li><li><a href="http://build.ros.org/view/Jbin_uV64/job/Jbin_uV64__arbotix__ubuntu_vivid_amd64__binary">binary ubuntu vivid amd64</a></li><li><a href="http://build.ros.org/view/Jbin_uV32/job/Jbin_uV32__arbotix__ubuntu_vivid_i386__binary">binary ubuntu vivid i386</a></li><li><a href="http://build.ros.org/view/Jdev/job/Jdev__arbotix_ros__ubuntu_trusty_amd64">devel ubuntu trusty amd64</a></li><li><a href="http://build.ros.org/view/Jdoc/job/Jdoc__arbotix_ros__ubuntu_trusty_amd64">doc</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Continuous integration</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span><p id="package-info-10">ArbotiX Drivers<p id="package-info-11"><ul><li>Maintainer status: maintained</li><li>Maintainer: Michael Ferguson &lt;mike AT vanadiumlabs DOT com&gt;</li><li>Author: Michael Ferguson</li><li>License: BSD</li><li>Source: git <a href="https://github.com/vanadiumlabs/arbotix_ros">https://github.com/vanadiumlabs/arbotix_ros.git</a> (branch: indigo-devel)</li></ul></div>
+<div class="version kinetic">Cannot load information on <strong>name: arbotix, distro: kinetic</strong>, which means that it is not yet in our index. Please see <a href="http://wiki.ros.org/rosdistro/Tutorials/Indexing%20Your%20ROS%20Repository%20for%20Documentation%20Generation">this page</a> for information on how to submit your repository to our index.</div>
+<div class="version lunar">Cannot load information on <strong>name: arbotix, distro: lunar</strong>, which means that it is not yet in our index. Please see <a href="http://wiki.ros.org/rosdistro/Tutorials/Indexing%20Your%20ROS%20Repository%20for%20Documentation%20Generation">this page</a> for information on how to submit your repository to our index.</div><p class="line874"> <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><p class="line867">
+<h2 id="Documentation">Documentation</h2>
+<span class="anchor" id="line-5"></span><p class="line862">Please see the individual packages within this stack for documentation. ArbotiX RoboControllers can be purchased from <a class="http" href="http://www.trossenrobotics.com/c/arbotix-robocontrollers.aspx">Trossen Robotics</a> <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867"><img align="right" alt="float" class="attachment" src="/arbotix?action=AttachFile&amp;do=get&amp;target=arbotix.jpeg" title="float" /> <span class="anchor" id="line-8"></span>
+<h2 id="Installing">Installing</h2>
+<span class="anchor" id="line-9"></span><p class="line874">You can install via debs: <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867"><strong>sudo apt-get install ros-<span title="Cannot load macro VersionName">&lt;&lt;VersionName()&gt;&gt;</span>-arbotix</strong> <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><p class="line867"><strong>OR</strong> check out the latest code from our repository: <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line867"><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><pre><span class="anchor" id="line-1-1"></span>git clone https://github.com/vanadiumlabs/arbotix_ros.git</pre><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><p class="line867">
+<h2 id="Report_a_Bug">Report a Bug</h2>
+<span class="anchor" id="line-21"></span><p class="line862">Bug reports, feature requests and patches are welcome. Please post new issues on our <a class="http" href="http://code.google.com/p/vanadium-ros-pkg/issues/list">Google Code</a> site. <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line867"><span class="anchor" id="line-24"></span><p class="line867"><span class="anchor" id="line-25"></span><span class="anchor" id="bottom"></span></div></div>
+<div id="pagebottom"></div>
+</div>
+
+<p id="pageinfo" class="info" lang="en" dir="ltr">Wiki: arbotix  (last edited 2014-12-10 04:42:49 by <span title="AustinHendrix @ c-50-131-146-103.hsd1.ca.comcast.net[50.131.146.103]"><a href="/AustinHendrix" title="AustinHendrix @ c-50-131-146-103.hsd1.ca.comcast.net[50.131.146.103]">AustinHendrix</a></span>)</p>
+
+
+
+
+<div style="margin-top: 9px;" class="footer">
+Except where otherwise noted, the ROS wiki is licensed under the <br /><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> | <a href="https://plus.google.com/113789706402978299308" rel="publisher">Find us on Google+</a>
+<hr style="margin-top: 10px;">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+<a href="http://www.osrfoundation.org"><img style="margin-top: -1px;" src="/custom/images/brought_by_horiz.png"></p></a>
+  </div>
+</div>
+</div>
+
+  </div></div> <!-- /#dpage-inner, /#dpage -->
+
+
+</body>
+</html>
+
+÷©ÎM      X„∫*X„∫,=ùr           :http://wiki.ros.org/arbotix necko:classified 1 strongly-framed 1 request-method GET request-Cookie CiPt8XrXByzm5hBw15/7suL8OU0= request-User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0 request-Accept-Language en-US,en;q=0.5 response-head HTTP/1.1 200 OK
+Date: Tue, 04 Apr 2017 14:21:06 GMT
+Server: Apache
+Vary: Cookie,User-Agent,Accept-Language
+Content-Length: 42256
+Content-Type: text/html; charset=utf-8
+ original-response-headers Date: Tue, 04 Apr 2017 14:21:06 GMT
+Server: Apache
+Vary: Cookie,User-Agent,Accept-Language
+Content-Length: 42256
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=utf-8
+ uncompressed-len 0 predictor::resource-count 16 predictor::http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css 1,1,1491319338,4096 predictor::http://code.jquery.com/jquery-1.11.0.min.js 1,1,1491319338,4096 predictor::http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js 1,1,1491319338,4096 predictor::http://wiki.ros.org/custom/js/sorttable.js 1,1,1491319338,4096 predictor::http://wiki.ros.org/custom/libraries/jquery.min.js 1,1,1491319338,4096 predictor::http://wiki.ros.org/custom/js/seesaw.js 1,1,1491319338,4096 predictor::http://wiki.ros.org/custom/js/rosversion.js 1,1,1491319338,4096 predictor::http://wiki.ros.org/moin_static197/common/js/common.js 1,1,1491319338,4096 predictor::http://wiki.ros.org/moin_static197/rostheme/css/common.css 1,1,1491319338,4096 predictor::http://wiki.ros.org/moin_static197/rostheme/css/screen.css 1,1,1491319338,4096 predictor::http://wiki.ros.org/moin_static197/rostheme/css/print.css 1,1,1491319338,4096 predictor::http://wiki.ros.org/moin_static197/rostheme/css/projection.css 1,1,1491319338,4096 predictor::http://www.google-analytics.com/ga.js 1,1,1491319338,4096 predictor::http://wiki.ros.org/custom/js/roswiki.js 1,1,1491319338,4096 net-response-time-onstart 1059 net-response-time-onstop 1355 predictor::http://wiki.ros.org/arbotix?action=AttachFile&do=get&target=arbotix.jpeg 1,1,1491319338,4096 predictor::http://netdna.bootstrapcdn.com/bootstrap/3.0.3/fonts/glyphicons-halflings-regular.woff 1,1,1491319338,4096   •

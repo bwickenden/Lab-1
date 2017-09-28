@@ -1,0 +1,110 @@
+status: 200
+content-length: 4559
+expires: Thu, 11 Aug 2016 11:27:34 GMT
+content-location: https://reviews.ubuntu.com/reviews/api/1.0/reviews/filter/en/ubuntu/trusty/any/arduino/page/1/helpful/
+strict-transport-security: max-age=15768000; includeSubDomains; preload
+vary: Accept
+server: gunicorn/19.3.0
+last-modified: Thu, 11 Aug 2016 11:22:34 GMT
+x-bzr-revision-number: 321
+cache-control: max-age=300
+date: Thu, 11 Aug 2016 11:22:34 GMT
+content-type: application/json; charset=utf-8
+
+[
+    {
+        "origin": "ubuntu", 
+        "rating": 3, 
+        "hide": false, 
+        "app_name": "Arduino IDE", 
+        "language": "en", 
+        "reviewer_username": "NhmPNdR", 
+        "usefulness_total": 3, 
+        "usefulness_favorable": 3, 
+        "review_text": "Nice IDE but to work with Arduino Due I had to install ARDUINO 1.5.8 BETA - 2014.10.01\nThe version in Software Center (1.1...) does NOT work with Arduino Due.", 
+        "date_deleted": null, 
+        "summary": "NOT current version for use with Arduino Due.", 
+        "version": "1:1.0.5+dfsg2-2", 
+        "id": 93460, 
+        "date_created": "2015-01-07 20:58:18", 
+        "reviewer_displayname": "James Luscher", 
+        "package_name": "arduino", 
+        "distroseries": "trusty"
+    }, 
+    {
+        "origin": "ubuntu", 
+        "rating": 5, 
+        "hide": false, 
+        "app_name": "Arduino IDE", 
+        "language": "en", 
+        "reviewer_username": "FHH4eGw", 
+        "usefulness_total": 2, 
+        "usefulness_favorable": 2, 
+        "review_text": "It's very nice that you can just install this package and start writing your first arduino programs right away. For the most part it just workes out of the box, so minimal setup is required. You can just start writing your programs (using the included examples and libraries!), choose your board, serial port and click compile/upload and you have your very first arduino program running.\n\nThe biggest drawback imho is the text editor. One could say its really simple, one could also argue its just bad. Pretty much non of the nice or must have feature of modern text editors are available. No linenumber (in the 1.05 version), no code ompletion, no themes, no plugins or extended settings, no nothing. \n\nIf you're just starting this might be fine, it does keep things simple I guess. But after a while you will probably start to dislike it. Although you have the option to use an external editor this is not a complete solution, you have to be moving back and forth between arduino ide and your text editor. I would recommend using sublime text incombination with the excellent stino plugin, gedit with some script files or a full blown ide like eclipse.", 
+        "date_deleted": null, 
+        "summary": "Very good for starting arduino programming", 
+        "version": "1:1.0.5+dfsg2-2", 
+        "id": 94737, 
+        "date_created": "2015-02-27 15:31:34", 
+        "reviewer_displayname": "Bram Harmsen", 
+        "package_name": "arduino", 
+        "distroseries": "trusty"
+    }, 
+    {
+        "origin": "ubuntu", 
+        "rating": 5, 
+        "hide": false, 
+        "app_name": "Arduino IDE", 
+        "language": "en", 
+        "reviewer_username": "tYeXEhR", 
+        "usefulness_total": 11, 
+        "usefulness_favorable": 8, 
+        "review_text": "Its up to date now 1.05.\nThanks Ubuntu", 
+        "date_deleted": null, 
+        "summary": "Up to date for now :-)", 
+        "version": "1:1.0.5+dfsg2-2", 
+        "id": 87874, 
+        "date_created": "2014-06-08 20:53:45", 
+        "reviewer_displayname": "Chris Sullivan", 
+        "package_name": "arduino", 
+        "distroseries": "trusty"
+    }, 
+    {
+        "origin": "ubuntu", 
+        "rating": 5, 
+        "hide": false, 
+        "app_name": "Arduino IDE", 
+        "language": "en", 
+        "reviewer_username": "fPNC4zW", 
+        "usefulness_total": 1, 
+        "usefulness_favorable": 1, 
+        "review_text": "PERFECT", 
+        "date_deleted": null, 
+        "summary": "EXCELLENT", 
+        "version": "1:1.0.5+dfsg2-2", 
+        "id": 94878, 
+        "date_created": "2015-03-05 14:07:57", 
+        "reviewer_displayname": "SHAYAN", 
+        "package_name": "arduino", 
+        "distroseries": "trusty"
+    }, 
+    {
+        "origin": "ubuntu", 
+        "rating": 1, 
+        "hide": false, 
+        "app_name": "Arduino IDE", 
+        "language": "en", 
+        "reviewer_username": "tCRsBGr", 
+        "usefulness_total": 1, 
+        "usefulness_favorable": 1, 
+        "review_text": "As a supporter of open-source, and by default the maker community, why is there not an app for the newer Arduino 1.6.7 IDE from the site or a more clear set of instructions for downloading from the site...??", 
+        "date_deleted": null, 
+        "summary": "A newer version please!!!", 
+        "version": "1:1.0.5+dfsg2-2", 
+        "id": 99661, 
+        "date_created": "2016-02-14 18:53:44", 
+        "reviewer_displayname": "Matt", 
+        "package_name": "arduino", 
+        "distroseries": "trusty"
+    }
+]

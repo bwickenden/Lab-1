@@ -1,0 +1,49 @@
+[rosmaster.main][INFO] 2017-04-04 16:50:43,451: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2017-04-04 16:50:43,451: Starting ROS Master Node
+[xmlrpc][INFO] 2017-04-04 16:50:43,452: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2017-04-04 16:50:43,453: Started XML-RPC server [http://SMB303Lab:11311/]
+[rosmaster.master][INFO] 2017-04-04 16:50:43,453: Master initialized: port[11311], uri[http://SMB303Lab:11311/]
+[xmlrpc][INFO] 2017-04-04 16:50:43,453: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2017-04-04 16:50:43,483: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2017-04-04 16:50:43,484: +PARAM [/roslaunch/uris/host_smb303lab__41819] by /roslaunch
+[rosmaster.master][INFO] 2017-04-04 16:50:43,552: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2017-04-04 16:50:43,553: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2017-04-04 16:50:43,949: +SERVICE [/rosout/get_loggers] /rosout http://SMB303Lab:43749/
+[rosmaster.master][INFO] 2017-04-04 16:50:43,951: +SERVICE [/rosout/set_logger_level] /rosout http://SMB303Lab:43749/
+[rosmaster.master][INFO] 2017-04-04 16:50:43,953: +PUB [/rosout_agg] /rosout http://SMB303Lab:43749/
+[rosmaster.master][INFO] 2017-04-04 16:50:43,958: +SUB [/rosout] /rosout http://SMB303Lab:43749/
+[rosmaster.master][INFO] 2017-04-04 16:51:16,496: +PUB [/rosout] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:16,497: +SERVICE [/rviz_1491321076492354430/get_loggers] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:16,498: +SERVICE [/rviz_1491321076492354430/set_logger_level] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:16,501: publisherUpdate[/rosout] -> http://SMB303Lab:43749/ ['http://SMB303Lab:42595/']
+[rosmaster.master][INFO] 2017-04-04 16:51:16,502: publisherUpdate[/rosout] -> http://SMB303Lab:43749/ ['http://SMB303Lab:42595/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2017-04-04 16:51:17,320: +SUB [/tf] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:17,324: +SUB [/tf_static] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:17,915: +PUB [/initialpose] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:17,917: +PUB [/goal] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:17,983: -PUB [/goal] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:17,983: -PUB [/initialpose] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:17,988: +PUB [/initialpose] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:17,989: +PUB [/goal] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:17,990: +PUB [/move_base_simple/goal] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:17,991: -PUB [/goal] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:17,991: +PUB [/clicked_point] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:18,118: +SERVICE [/rviz_1491321076492354430/reload_shaders] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:24,618: -PUB [/clicked_point] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:24,619: -PUB [/move_base_simple/goal] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:24,619: -PUB [/initialpose] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:24,624: -SUB [/tf_static] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:24,625: -SUB [/tf] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:24,627: -SERVICE [/rviz_1491321076492354430/reload_shaders] /rviz_1491321076492354430 rosrpc://SMB303Lab:54773
+[rosmaster.master][INFO] 2017-04-04 16:51:24,815: -PUB [/rosout] /rviz_1491321076492354430 http://SMB303Lab:42595/
+[rosmaster.master][INFO] 2017-04-04 16:51:24,816: -SERVICE [/rviz_1491321076492354430/get_loggers] /rviz_1491321076492354430 rosrpc://SMB303Lab:54773
+[rosmaster.master][INFO] 2017-04-04 16:51:24,817: -SERVICE [/rviz_1491321076492354430/set_logger_level] /rviz_1491321076492354430 rosrpc://SMB303Lab:54773
+[rosmaster.master][INFO] 2017-04-04 16:51:24,913: publisherUpdate[/rosout] -> http://SMB303Lab:43749/ []
+[rosmaster.master][INFO] 2017-04-04 16:51:24,914: publisherUpdate[/rosout] -> http://SMB303Lab:43749/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2017-04-04 16:56:12,601: -PUB [/rosout_agg] /rosout http://SMB303Lab:43749/
+[rosmaster.master][INFO] 2017-04-04 16:56:12,602: -SUB [/rosout] /rosout http://SMB303Lab:43749/
+[rosmaster.master][INFO] 2017-04-04 16:56:12,603: -SERVICE [/rosout/get_loggers] /rosout rosrpc://SMB303Lab:56947
+[rosmaster.master][INFO] 2017-04-04 16:56:12,603: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://SMB303Lab:56947
+[rosmaster.main][INFO] 2017-04-04 16:56:12,652: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2017-04-04 16:56:12,652: stopping master...
+[rospy.core][INFO] 2017-04-04 16:56:12,652: signal_shutdown [atexit]

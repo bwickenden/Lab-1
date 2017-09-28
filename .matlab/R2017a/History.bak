@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<history>
+<session>
+<command time_stamp="15679f3f40a">%-- 11/08/16  3:14:06 pm BST --%</command>
+<command error="true" execution_time="919">roscore</command>
+<command error="true" execution_time="82">rosbag</command>
+<command error="true" execution_time="135">ros</command>
+<command error="true" execution_time="146">roscore</command>
+<command execution_time="1665">rosinit</command>
+<command execution_time="58">rosnode list</command>
+<command execution_time="54">rostopic list</command>
+<command execution_time="2504">exampleHelperROSCreateSampleNetwork</command>
+<command execution_time="920">ver</command>
+<command execution_time="118">path</command>
+</session>
+<session>
+<command time_stamp="1567a032bd3">%-- 11/08/16  3:30:43 pm BST --%</command>
+<command execution_time="165">ver</command>
+<command execution_time="116">path</command>
+<command error="true" execution_time="378">Arbotix</command>
+<command execution_time="78">path</command>
+<command error="true" execution_time="78">addpath</command>
+</session>
+<session>
+<command time_stamp="1567a268f5c">%-- 11/08/16  4:09:23 pm BST --%</command>
+<command execution_time="173">ver</command>
+<command error="true" execution_time="366">Arbotx</command>
+<command error="true" execution_time="153">Arbotix</command>
+<command execution_time="116">addpath('/usr/local/MATLAB/R2016a/toolbox/rvctools')</command>
+<command execution_time="129">ver</command>
+<command error="true" execution_time="147">Arbotix</command>
+<command execution_time="104">path</command>
+<command execution_time="152">savepath</command>
+</session>
+<session>
+<command time_stamp="1567a2a1799">%-- 11/08/16  4:13:14 pm BST --%</command>
+<command execution_time="112">addpath('/usr/local/MATLAB/R2016a/toolbox/rvctools')</command>
+<command execution_time="97">savepath</command>
+</session>
+<session>
+<command time_stamp="1567a2aac27">%-- 11/08/16  4:13:52 pm BST --%</command>
+<command error="true" execution_time="369">Arbotix</command>
+</session>
+<session>
+<command time_stamp="1567a2d2226">%-- 11/08/16  4:16:33 pm BST --%</command>
+<command execution_time="127">path</command>
+<command error="true" execution_time="179" repeat="2">MATLABPATH</command>
+<command execution_time="79">matlabpath</command>
+<command execution_time="25">which pathdef.m -all</command>
+</session>
+<session>
+<command time_stamp="1567a2eeffb">%-- 11/08/16  4:18:32 pm BST --%</command>
+<command error="true" execution_time="379">Arbotix</command>
+<command error="true" execution_time="130">ARB</command>
+<command error="true" execution_time="169">SerialLink</command>
+<command execution_time="163">ver</command>
+</session>
+<session>
+<command time_stamp="1567a319d7e">%-- 11/08/16  4:21:27 pm BST --%</command>
+<command execution_time="1071">startup_rvc</command>
+<command execution_time="4783">rtbdemo</command>
+<command error="true" execution_time="452">Arbotix</command>
+<command error="true" execution_time="111622">rtbdemo</command>
+<command error="true" execution_time="284">arb=Arbotix('port', '/dev/tty.usbserial-A800JDPN', 'nservos', 5);</command>
+<command error="true" execution_time="277">arb=Arbotix('port', '/dev/ttyUSB0', 'nservos', 1);</command>
+</session>
+<session>
+<command time_stamp="1567a34d389">%-- 11/08/16  4:24:58 pm BST --%</command>
+<command error="true" execution_time="385">Arbotix</command>
+</session>
+<session>
+<command time_stamp="1567a356c29">%-- 11/08/16  4:25:37 pm BST --%</command>
+<command execution_time="993">startup_rvc</command>
+<command error="true" execution_time="460">print(MATLABPATH)</command>
+<command error="true" execution_time="284">print(matlabpath)</command>
+</session>
+<session>
+<command time_stamp="1567a380731">%-- 11/08/16  4:28:27 pm BST --%</command>
+<command execution_time="110">addpath('/home/student/Install/rvctools')</command>
+</session>
+<session>
+<command time_stamp="1567a38ec26">%-- 11/08/16  4:29:26 pm BST --%</command>
+<command execution_time="114">addpath('/home/student/Install/rvctools')</command>
+<command execution_time="95">savepath</command>
+<command execution_time="962">startup_rvc</command>
+</session>
+<session>
+<command time_stamp="1567a396ce9">%-- 11/08/16  4:29:59 pm BST --%</command>
+<command error="true" execution_time="365">Arbotix</command>
+<command execution_time="106">path</command>
+<command error="true" execution_time="168">SerialLink</command>
+<command execution_time="1027">Arbotix</command>
+</session>
+<session>
+<command time_stamp="1567a3c54f6">%-- 11/08/16  4:33:09 pm BST --%</command>
+<command execution_time="886">arb=Arbotix('port', '/dev/ttyUSB0', 'nservos', 1);</command>
+<command batch="1" error="true">q = arb.getpos();</command>
+<command batch="1" error="true" execution_time="16809">arb.setpos(q + 0.1);</command>
+<command error="true" execution_time="7160">q = arb.getpos();</command>
+</session>
+<session>
+<command time_stamp="1567a3e7137">%-- 11/08/16  4:35:28 pm BST --%</command>
+<command execution_time="870">arb=Arbotix('port', '/dev/ttyUSB0', 'nservos', 1);</command>
+<command error="true" execution_time="44759">q = arb.getpos();</command>
+<command execution_time="614" repeat="2">arb=Arbotix('port', '/dev/ttyUSB0', 'nservos', 1);</command>
+<command execution_time="577">arb=Arbotix('port', '/dev/ttyUSB1', 'nservos', 1);</command>
+<command error="true" execution_time="5673">q = arb.getpos();</command>
+<command execution_time="863">rosinit</command>
+</session>
+<session>
+<command time_stamp="15b39aa95f9">%-- 04/04/17  4:52:13 pm BST --%</command>
+<command execution_time="2242">startup_rvc</command>
+</session>
+<session>
+<command time_stamp="15b39d924b4">%-- 04/04/17  5:43:04 pm BST --%</command>
+<command error="true" execution_time="912">startup_rvc</command>
+</session>
+<session>
+<command time_stamp="15b39dc4022">%-- 04/04/17  5:46:27 pm BST --%</command>
+<command execution_time="3063" repeat="2">startup_rvc</command>
+</session>
+</history>

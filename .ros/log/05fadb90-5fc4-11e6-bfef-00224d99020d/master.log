@@ -1,0 +1,110 @@
+[rosmaster.main][INFO] 2016-08-11 14:03:40,287: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2016-08-11 14:03:40,287: Starting ROS Master Node
+[xmlrpc][INFO] 2016-08-11 14:03:40,288: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2016-08-11 14:03:40,288: Started XML-RPC server [http://SMB303B:11311/]
+[xmlrpc][INFO] 2016-08-11 14:03:40,289: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2016-08-11 14:03:40,289: Master initialized: port[11311], uri[http://SMB303B:11311/]
+[rosmaster.master][INFO] 2016-08-11 14:03:40,381: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2016-08-11 14:03:40,382: +PARAM [/roslaunch/uris/host_smb303b__39383] by /roslaunch
+[rosmaster.master][INFO] 2016-08-11 14:03:40,420: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2016-08-11 14:03:40,420: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2016-08-11 14:03:40,424: +SERVICE [/rosout/get_loggers] /rosout http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:03:40,425: +SERVICE [/rosout/set_logger_level] /rosout http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:03:40,426: +PUB [/rosout_agg] /rosout http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:03:40,429: +SUB [/rosout] /rosout http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:03:43,232: +PUB [/rosout] /arbotix http://SMB303B:38580/
+[rosmaster.master][INFO] 2016-08-11 14:03:43,235: +SERVICE [/arbotix/get_loggers] /arbotix http://SMB303B:38580/
+[rosmaster.master][INFO] 2016-08-11 14:03:43,236: +SERVICE [/arbotix/set_logger_level] /arbotix http://SMB303B:38580/
+[rosmaster.master][INFO] 2016-08-11 14:03:43,246: +PUB [/diagnostics] /arbotix http://SMB303B:38580/
+[rosmaster.master][INFO] 2016-08-11 14:03:43,249: +PUB [/joint_states] /arbotix http://SMB303B:38580/
+[rosmaster.master][INFO] 2016-08-11 14:03:43,292: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:03:44,264: +SERVICE [/arbotix/SetupAnalogIn] /arbotix http://SMB303B:38580/
+[rosmaster.master][INFO] 2016-08-11 14:03:44,266: +SERVICE [/arbotix/SetupDigitalIn] /arbotix http://SMB303B:38580/
+[rosmaster.master][INFO] 2016-08-11 14:03:44,267: +SERVICE [/arbotix/SetupDigitalOut] /arbotix http://SMB303B:38580/
+[rosmaster.master][INFO] 2016-08-11 14:07:34,376: -PUB [/diagnostics] /arbotix http://SMB303B:38580/
+[rosmaster.master][INFO] 2016-08-11 14:07:34,376: -PUB [/joint_states] /arbotix http://SMB303B:38580/
+[rosmaster.master][INFO] 2016-08-11 14:07:34,377: -PUB [/rosout] /arbotix http://SMB303B:38580/
+[rosmaster.master][INFO] 2016-08-11 14:07:34,377: -SERVICE [/arbotix/SetupDigitalOut] /arbotix rosrpc://SMB303B:42210
+[rosmaster.master][INFO] 2016-08-11 14:07:34,377: -SERVICE [/arbotix/get_loggers] /arbotix rosrpc://SMB303B:42210
+[rosmaster.master][INFO] 2016-08-11 14:07:34,377: -SERVICE [/arbotix/SetupDigitalIn] /arbotix rosrpc://SMB303B:42210
+[rosmaster.master][INFO] 2016-08-11 14:07:34,377: -SERVICE [/arbotix/SetupAnalogIn] /arbotix rosrpc://SMB303B:42210
+[rosmaster.master][INFO] 2016-08-11 14:07:34,378: -SERVICE [/arbotix/set_logger_level] /arbotix rosrpc://SMB303B:42210
+[rosmaster.master][INFO] 2016-08-11 14:07:34,411: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:07:35,693: +PUB [/rosout] /arbotix http://SMB303B:39223/
+[rosmaster.master][INFO] 2016-08-11 14:07:35,696: +SERVICE [/arbotix/get_loggers] /arbotix http://SMB303B:39223/
+[rosmaster.master][INFO] 2016-08-11 14:07:35,698: +SERVICE [/arbotix/set_logger_level] /arbotix http://SMB303B:39223/
+[rosmaster.master][INFO] 2016-08-11 14:07:35,710: +PUB [/diagnostics] /arbotix http://SMB303B:39223/
+[rosmaster.master][INFO] 2016-08-11 14:07:35,713: +PUB [/joint_states] /arbotix http://SMB303B:39223/
+[rosmaster.master][INFO] 2016-08-11 14:07:35,714: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:07:36,729: +SERVICE [/arbotix/SetupAnalogIn] /arbotix http://SMB303B:39223/
+[rosmaster.master][INFO] 2016-08-11 14:07:36,731: +SERVICE [/arbotix/SetupDigitalIn] /arbotix http://SMB303B:39223/
+[rosmaster.master][INFO] 2016-08-11 14:07:36,732: +SERVICE [/arbotix/SetupDigitalOut] /arbotix http://SMB303B:39223/
+[rosmaster.master][INFO] 2016-08-11 14:07:43,336: -PUB [/diagnostics] /arbotix http://SMB303B:39223/
+[rosmaster.master][INFO] 2016-08-11 14:07:43,336: -PUB [/joint_states] /arbotix http://SMB303B:39223/
+[rosmaster.master][INFO] 2016-08-11 14:07:43,337: -PUB [/rosout] /arbotix http://SMB303B:39223/
+[rosmaster.master][INFO] 2016-08-11 14:07:43,337: -SERVICE [/arbotix/SetupDigitalOut] /arbotix rosrpc://SMB303B:34067
+[rosmaster.master][INFO] 2016-08-11 14:07:43,337: -SERVICE [/arbotix/get_loggers] /arbotix rosrpc://SMB303B:34067
+[rosmaster.master][INFO] 2016-08-11 14:07:43,337: -SERVICE [/arbotix/SetupDigitalIn] /arbotix rosrpc://SMB303B:34067
+[rosmaster.master][INFO] 2016-08-11 14:07:43,337: -SERVICE [/arbotix/SetupAnalogIn] /arbotix rosrpc://SMB303B:34067
+[rosmaster.master][INFO] 2016-08-11 14:07:43,337: -SERVICE [/arbotix/set_logger_level] /arbotix rosrpc://SMB303B:34067
+[rosmaster.master][INFO] 2016-08-11 14:07:43,424: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:07:46,435: +PUB [/rosout] /arbotix http://SMB303B:37821/
+[rosmaster.master][INFO] 2016-08-11 14:07:46,438: +SERVICE [/arbotix/get_loggers] /arbotix http://SMB303B:37821/
+[rosmaster.master][INFO] 2016-08-11 14:07:46,439: +SERVICE [/arbotix/set_logger_level] /arbotix http://SMB303B:37821/
+[rosmaster.master][INFO] 2016-08-11 14:07:46,450: +PUB [/diagnostics] /arbotix http://SMB303B:37821/
+[rosmaster.master][INFO] 2016-08-11 14:07:46,453: +PUB [/joint_states] /arbotix http://SMB303B:37821/
+[rosmaster.master][INFO] 2016-08-11 14:07:46,529: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:07:47,469: +SERVICE [/arbotix/SetupAnalogIn] /arbotix http://SMB303B:37821/
+[rosmaster.master][INFO] 2016-08-11 14:07:47,470: +SERVICE [/arbotix/SetupDigitalIn] /arbotix http://SMB303B:37821/
+[rosmaster.master][INFO] 2016-08-11 14:07:47,472: +SERVICE [/arbotix/SetupDigitalOut] /arbotix http://SMB303B:37821/
+[rosmaster.master][INFO] 2016-08-11 14:14:43,348: +PUB [/rosout] /controllerGUI http://SMB303B:33298/
+[rosmaster.master][INFO] 2016-08-11 14:14:43,353: +SERVICE [/controllerGUI/get_loggers] /controllerGUI http://SMB303B:33298/
+[rosmaster.master][INFO] 2016-08-11 14:14:43,354: +SERVICE [/controllerGUI/set_logger_level] /controllerGUI http://SMB303B:33298/
+[rosmaster.master][INFO] 2016-08-11 14:14:43,404: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:14:43,455: +PUB [/cmd_vel] /controllerGUI http://SMB303B:33298/
+[rosmaster.master][INFO] 2016-08-11 14:14:43,463: +SUB [/joint_states] /controllerGUI http://SMB303B:33298/
+[rosmaster.master][INFO] 2016-08-11 14:15:30,520: -SUB [/joint_states] /controllerGUI http://SMB303B:33298/
+[rosmaster.master][INFO] 2016-08-11 14:15:30,520: -PUB [/rosout] /controllerGUI http://SMB303B:33298/
+[rosmaster.master][INFO] 2016-08-11 14:15:30,520: -PUB [/cmd_vel] /controllerGUI http://SMB303B:33298/
+[rosmaster.master][INFO] 2016-08-11 14:15:30,520: -SERVICE [/controllerGUI/get_loggers] /controllerGUI rosrpc://SMB303B:40856
+[rosmaster.master][INFO] 2016-08-11 14:15:30,521: -SERVICE [/controllerGUI/set_logger_level] /controllerGUI rosrpc://SMB303B:40856
+[rosmaster.master][INFO] 2016-08-11 14:15:30,568: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:15:47,065: +PUB [/rosout] /rostopic_10383_1470921346923 http://SMB303B:42422/
+[rosmaster.master][INFO] 2016-08-11 14:15:47,069: +SERVICE [/rostopic_10383_1470921346923/get_loggers] /rostopic_10383_1470921346923 http://SMB303B:42422/
+[rosmaster.master][INFO] 2016-08-11 14:15:47,071: +SERVICE [/rostopic_10383_1470921346923/set_logger_level] /rostopic_10383_1470921346923 http://SMB303B:42422/
+[rosmaster.master][INFO] 2016-08-11 14:15:47,088: +SUB [/joint_states] /rostopic_10383_1470921346923 http://SMB303B:42422/
+[rosmaster.master][INFO] 2016-08-11 14:15:47,090: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:15:53,564: -SUB [/joint_states] /rostopic_10383_1470921346923 http://SMB303B:42422/
+[rosmaster.master][INFO] 2016-08-11 14:15:53,564: -PUB [/rosout] /rostopic_10383_1470921346923 http://SMB303B:42422/
+[rosmaster.master][INFO] 2016-08-11 14:15:53,564: -SERVICE [/rostopic_10383_1470921346923/set_logger_level] /rostopic_10383_1470921346923 rosrpc://SMB303B:46237
+[rosmaster.master][INFO] 2016-08-11 14:15:53,564: -SERVICE [/rostopic_10383_1470921346923/get_loggers] /rostopic_10383_1470921346923 rosrpc://SMB303B:46237
+[rosmaster.master][INFO] 2016-08-11 14:15:53,600: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:16:08,637: +PUB [/rosout] /rostopic_10418_1470921368503 http://SMB303B:41088/
+[rosmaster.master][INFO] 2016-08-11 14:16:08,641: +SERVICE [/rostopic_10418_1470921368503/get_loggers] /rostopic_10418_1470921368503 http://SMB303B:41088/
+[rosmaster.master][INFO] 2016-08-11 14:16:08,642: +SERVICE [/rostopic_10418_1470921368503/set_logger_level] /rostopic_10418_1470921368503 http://SMB303B:41088/
+[rosmaster.master][INFO] 2016-08-11 14:16:08,649: +SUB [/diagnostics] /rostopic_10418_1470921368503 http://SMB303B:41088/
+[rosmaster.master][INFO] 2016-08-11 14:16:08,721: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:16:12,524: -SUB [/diagnostics] /rostopic_10418_1470921368503 http://SMB303B:41088/
+[rosmaster.master][INFO] 2016-08-11 14:16:12,524: -PUB [/rosout] /rostopic_10418_1470921368503 http://SMB303B:41088/
+[rosmaster.master][INFO] 2016-08-11 14:16:12,525: -SERVICE [/rostopic_10418_1470921368503/set_logger_level] /rostopic_10418_1470921368503 rosrpc://SMB303B:46183
+[rosmaster.master][INFO] 2016-08-11 14:16:12,525: -SERVICE [/rostopic_10418_1470921368503/get_loggers] /rostopic_10418_1470921368503 rosrpc://SMB303B:46183
+[rosmaster.master][INFO] 2016-08-11 14:16:12,526: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:16:29,435: +PUB [/rosout] /controllerGUI http://SMB303B:38143/
+[rosmaster.master][INFO] 2016-08-11 14:16:29,439: +SERVICE [/controllerGUI/get_loggers] /controllerGUI http://SMB303B:38143/
+[rosmaster.master][INFO] 2016-08-11 14:16:29,441: +SERVICE [/controllerGUI/set_logger_level] /controllerGUI http://SMB303B:38143/
+[rosmaster.master][INFO] 2016-08-11 14:16:29,450: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:16:29,491: +PUB [/cmd_vel] /controllerGUI http://SMB303B:38143/
+[rosmaster.master][INFO] 2016-08-11 14:16:29,498: +SUB [/joint_states] /controllerGUI http://SMB303B:38143/
+[rosmaster.master][INFO] 2016-08-11 14:16:50,770: -SUB [/joint_states] /controllerGUI http://SMB303B:38143/
+[rosmaster.master][INFO] 2016-08-11 14:16:50,770: -PUB [/rosout] /controllerGUI http://SMB303B:38143/
+[rosmaster.master][INFO] 2016-08-11 14:16:50,770: -PUB [/cmd_vel] /controllerGUI http://SMB303B:38143/
+[rosmaster.master][INFO] 2016-08-11 14:16:50,770: -SERVICE [/controllerGUI/get_loggers] /controllerGUI rosrpc://SMB303B:35801
+[rosmaster.master][INFO] 2016-08-11 14:16:50,770: -SERVICE [/controllerGUI/set_logger_level] /controllerGUI rosrpc://SMB303B:35801
+[rosmaster.master][INFO] 2016-08-11 14:16:50,779: publisherUpdate[/rosout] -> http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:29:06,224: -PUB [/rosout_agg] /rosout http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:29:06,225: -SUB [/rosout] /rosout http://SMB303B:41049/
+[rosmaster.master][INFO] 2016-08-11 14:29:06,225: -SERVICE [/rosout/get_loggers] /rosout rosrpc://SMB303B:34618
+[rosmaster.master][INFO] 2016-08-11 14:29:06,226: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://SMB303B:34618
+[rosmaster.main][INFO] 2016-08-11 14:29:06,290: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2016-08-11 14:29:06,290: stopping master...
+[rospy.core][INFO] 2016-08-11 14:29:06,291: signal_shutdown [atexit]

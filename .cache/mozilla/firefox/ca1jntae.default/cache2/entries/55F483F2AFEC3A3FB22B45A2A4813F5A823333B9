@@ -1,0 +1,668 @@
+var EmbeddedLogin = EmbeddedLogin || {};
+
+EmbeddedLogin.defaultLocale = "en_US";
+EmbeddedLogin.defaultLanguage = "en";
+EmbeddedLogin.defaultClientString = "EMBDLGN";
+EmbeddedLogin.locale = "en_US";
+EmbeddedLogin.language = "en";
+EmbeddedLogin.inputParameters = null;
+
+/*
+ * inputs:
+ *   - the event from the postMessage event
+ *   - the method callback to call after the nonce has been verified
+ */
+EmbeddedLogin.receiver = function(event) {
+	//console.log("[EMBEDDED-LOGIN] recieved event");
+	if (EmbeddedLogin.getParameterByName("workflow")=='cancel') {
+		//do nothing
+	} else {
+		EmbeddedApps.eventProcessor(event, EmbeddedLogin.loadParameters);
+	}
+};
+
+EmbeddedLogin.loadParameters = function(loadData) {
+	EmbeddedLogin.inputParameters = EmbeddedLogin.validateLoadData(loadData);
+	
+	var location = EmbeddedLogin.modeConfiguration(loadData);
+	if (location) {
+		EmbeddedApps.setDetailsAsCookie(EmbeddedLogin.inputParameters);
+		window.location.href = location;
+		return;
+	}
+	
+	//build locale specific labels
+	EmbeddedLogin.processLocale();
+	if (EmbeddedLogin.language && EmbeddedLogin.language != "en" && EmbeddedLogin.labels[EmbeddedLogin.language]) {
+		EmbeddedLogin.loadTranslatedLabels(EmbeddedLogin.language);
+	}
+
+    //console.log("[EMBEDDED-LOGIN] loaded translation");
+		
+	//show body now that the form is set
+	$.when(
+		EmbeddedLogin.resetUI(),
+	 	EmbeddedLogin.loadReleaseSpecificCss(loadData.clientString, loadData.release, loadData.platform),
+	 	EmbeddedLogin.loadBrowserSpecificCss(),
+		EmbeddedLogin.showCreateButton(EmbeddedLogin.inputParameters.showCreateAccount),
+	 	EmbeddedLogin.showLoginButton(),
+	 	EmbeddedLogin.showRememberMe(EmbeddedLogin.inputParameters.showRememberMe, EmbeddedLogin.inputParameters.cachedRememberMe),
+	 	EmbeddedLogin.showPrivacyPolicy(EmbeddedLogin.inputParameters.showPrivacyPolicy),
+	 	EmbeddedLogin.showLegalText(EmbeddedLogin.inputParameters.legalText),
+	 	EmbeddedLogin.showContextualText(EmbeddedLogin.inputParameters.contextualText),
+	 	EmbeddedLogin.showContextualErrorText(EmbeddedLogin.inputParameters.contextualErrorText),
+	 	EmbeddedLogin.loadCachedUsername(EmbeddedLogin.inputParameters.cachedUsername, EmbeddedLogin.inputParameters.identifierReadOnly)
+	).always(function() {
+		//console.log("[EMBEDDED-LOGIN] config complete");		
+		$('body').css('display','block');
+		EmbeddedLogin.setFocus(EmbeddedLogin.inputParameters.cachedUsername);
+		//console.log("[EMBEDDED-LOGIN] load complete");		
+	});
+};
+
+EmbeddedLogin.modeConfiguration = function(loadData) {
+	//Is this a cancel or forgot workflow (EP sending back to EL)?
+	if (loadData.workflow) {
+		//console.log("[EMBEDDED_LOGIN] workflow parameter was found, don't load based on mode.");
+		return;
+	}
+	//Is this the unauthorized flow?
+	if (loadData.token && loadData.unauthorized) {
+		//console.log("[EMBEDDED_LOGIN] unauthorized flow");
+		return EmbeddedLogin.buildUrl("/mwaccount/widgets/embedded/licenses/unauthorized");
+	}
+	
+	//Is this the new way to specify unauthorized?
+	if (loadData.token && loadData.mode && loadData.mode.toUpperCase() == "UNAUTHORIZED") {
+		//console.log("[EMBEDDED_LOGIN] unauthorized flow");
+		return EmbeddedLogin.buildUrl("/mwaccount/widgets/embedded/licenses/unauthorized");
+	}
+	
+	//Is this the incomplete workflow?
+	if (loadData.token && loadData.mode && loadData.mode.toUpperCase() == "INCOMPLETE") {
+		//console.log("[EMBEDDED_LOGIN] incomplete flow");
+		return EmbeddedLogin.buildUrl("/mwaccount/widgets/embedded/profiles/incomplete");
+	}
+	
+	//Is this the create workflow?
+	if (loadData.mode && loadData.mode.toUpperCase() == "CREATE") {
+		//console.log("[EMBEDDED_LOGIN] incomplete flow");
+		//TODO: maybe move urls to a config file
+		return EmbeddedLogin.buildUrl("/mwaccount/widgets/embedded/profiles/new");
+	}
+	
+};
+
+EmbeddedLogin.setFocus = function(cachedUsername) {
+	if (cachedUsername) {
+		$("#password").focus();
+	} else {
+		$("#userId").focus();
+	}
+};
+
+EmbeddedLogin.processLocale = function() {
+	EmbeddedLogin.locale = EmbeddedLogin.getParameterByName("locale");
+	if (EmbeddedLogin.locale) {
+		EmbeddedLogin.inputParameters.locale = EmbeddedLogin.locale;
+		//console.log("[EMBEDDED-LOGIN] locale found: " + EmbeddedLogin.locale);
+		EmbeddedLogin.language = EmbeddedLogin.parseLanguage(EmbeddedLogin.locale);
+		//console.log("[EMBEDDED-LOGIN] language found: " + EmbeddedLogin.language);		
+	} else {
+		EmbeddedLogin.locale = EmbeddedLogin.defaultLocale;
+		EmbeddedLogin.inputParameters.locale = EmbeddedLogin.locale;
+		//console.log("[EMBEDDED-LOGIN] Setting default locale: " + EmbeddedLogin.locale);
+		EmbeddedLogin.language = EmbeddedLogin.defaultLanguage;
+		//console.log("[EMBEDDED-LOGIN] Setting default language: " + EmbeddedLogin.language);				
+	}
+};
+
+EmbeddedLogin.parseLanguage = function(locale) {
+	if (locale) {
+		var localeParts = locale.split("_");
+		//console.log("[EMBEDDED-LOGIN] localeParts: " + localeParts);				
+		if (localeParts.length == 1) {
+			localeParts = locale.split("-");
+		}
+	
+		return localeParts[0].toLowerCase();
+	} else {
+		return null;
+	}
+};
+
+EmbeddedLogin.resetUI = function() {
+	return $.Deferred(function(dfd) {
+		EmbeddedLogin.clearErrors();
+		
+		//Check if form was hidden for lockout error:
+		$("#form_body").show();
+		$(".form_actions").show();
+		
+		//clear any input
+		//$("#userId").val(''); //this will be done in the loadCachedUsername
+		$("#password").val('');
+		
+		dfd.resolve();
+	}).promise();
+};
+
+EmbeddedLogin.loadReleaseSpecificCss = function(clientString, release, platform) {
+	return $.get("/embedded-login/caller.css?caller=" + clientString + "&release=" + release + "&platform=" + platform, function(data) {
+		if (data) {
+			var releaseCss = document.createElement("link");
+			releaseCss.setAttribute("rel", "stylesheet");
+			releaseCss.setAttribute("type", "text/css");
+			releaseCss.setAttribute("href", "/embedded-login/css" + data + "?id=" + buildid);
+		
+			$("head").append(releaseCss);
+		
+			//console.log("[EMBEDDED-LOGIN] loaded caller specific css");	
+		}
+	});
+};
+
+EmbeddedLogin.loadBrowserSpecificCss = function() {
+	//if IE 11
+	if (/Trident.*rv[ :]?11\./.test(navigator.userAgent)) {
+		var browserCss = document.createElement("link");
+		browserCss.setAttribute("rel", "stylesheet");
+		browserCss.setAttribute("type", "text/css");
+		browserCss.setAttribute("href", "/embedded-login/css/embedded_ie11.css?id=" + buildid);
+		$("head").append(browserCss);
+	}
+};
+
+EmbeddedLogin.showLegalText = function(legalText) {
+	if (legalText) {
+		return $.Deferred(function(dfd) {
+			//console.log("[EMBEDDED-LOGIN] show legal text");
+			$("#legalTextBlock").html('<p><small class="add_font_color_general"><em>' + legalText + '</em></small></p>');
+			dfd.resolve();
+		}).promise();
+	} else {
+		return $.Deferred(function(dfd) {
+			dfd.resolve();
+		}).promise();
+	}
+};
+
+EmbeddedLogin.showContextualText = function(contextualText) {
+	if (contextualText) {
+		return $.Deferred(function(dfd) {
+			//console.log("[EMBEDDED-LOGIN] show contextual text (" + contextualText + ")");
+			$("#contextualText").html('<p><small class="add_font_color_general">' + contextualText + '</small></p>');
+			dfd.resolve();
+		}).promise();
+	} else {
+		return $.Deferred(function(dfd) {
+			dfd.resolve();
+		}).promise();
+	}
+};
+
+EmbeddedLogin.showContextualErrorText = function(contextualErrorText) {
+	if (contextualErrorText) {
+		return $.Deferred(function(dfd) {
+			//console.log("[EMBEDDED-LOGIN] show contextual error text (" + contextualErrorText + ")");
+			var errorBlock = EmbeddedLogin.buildErrorBlock(contextualErrorText);
+			$("#form_body").before(errorBlock);
+			dfd.resolve();
+		}).promise();
+	} else {
+		return $.Deferred(function(dfd) {
+			dfd.resolve();
+		}).promise();
+	}
+};
+
+EmbeddedLogin.showCreateButton = function(show) {
+	if (show) {
+		return $.Deferred(function(dfd) {
+			//console.log("[EMBEDDED-LOGIN] show create button");
+			$("#createCol").show(0, dfd.resolve);
+		}).promise();
+	} else {
+		return $.Deferred(function(dfd) {
+			dfd.resolve();
+		}).promise();
+	}
+};
+
+EmbeddedLogin.showLoginButton = function() {
+	return $.Deferred(function(dfd) {
+		//console.log("[EMBEDDED-LOGIN] show small login button");
+		var loginCol = $("#logInCol");
+		loginCol.show(0, dfd.resolve);
+	}).promise();
+};
+
+EmbeddedLogin.showRememberMe = function(show, rememberMe) {
+	if (show) {
+		return $.Deferred(function(dfd) {
+			//console.log("[EMBEDDED-LOGIN] show rememberMe button");
+			var checked = "";
+			if (rememberMe) {
+				checked = 'checked="checked"';
+			}
+			$("#rememberMeBlock").html('<div class="checkbox"><label><input type="checkbox" name="rememberMe" id="rememberMe" value="rememberMe" tabindex="3" '+ checked + '>' + EmbeddedLogin.getTranslation("rememberMeLabel") + '</label></div>');
+			dfd.resolve();
+		}).promise();
+	} else {
+		return $.Deferred(function(dfd) {
+			dfd.resolve();
+		}).promise();
+	}
+};
+
+EmbeddedLogin.showPrivacyPolicy = function(show) {
+	if (show) {
+		return $.Deferred(function(dfd) {
+			//console.log("[EMBEDDED-LOGIN] show privacy policy");
+			$("#privacyPolicyBlock").html('<p><small class="add_font_color_general">' + EmbeddedLogin.getTranslation("privacyPolicy") + '</small></p>');
+			dfd.resolve();
+		}).promise();
+	} else {
+		return $.Deferred(function(dfd) {
+			dfd.resolve();
+		}).promise();
+	}
+};
+
+EmbeddedLogin.loadCachedUsername = function(username, readOnly) {
+	if (username) {
+		return $.Deferred(function(dfd) {
+			//console.log("[EMBEDDED-LOGIN] loading cached username");
+			$("#userId").attr("value", username);
+			if (readOnly) {
+				//console.log("[EMBEDDED-LOGIN] read only? " + readOnly);
+				$("#userId").attr("disabled", "disabled");
+			}
+			dfd.resolve();
+		}).promise();
+	} else {
+		return $.Deferred(function(dfd) {
+			$("#userId").attr("value", "");
+			dfd.resolve();
+		}).promise();
+	}
+};
+
+EmbeddedLogin.getParameterByName = function(name) {
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+};
+
+EmbeddedLogin.loadTranslatedLabels = function(locale) {
+	//console.log("[EMBEDDED-LOGIN] loading translations");
+	//title 
+	$("#title").text(EmbeddedLogin.labels[locale].title);
+	
+	//username
+	$("#userId").attr("placeholder", EmbeddedLogin.labels[locale].usernameDescription);
+	
+	//password
+	$("#password").attr("placeholder", EmbeddedLogin.labels[locale].passwordDescription);
+	
+	//login
+	$("#submit span").text(EmbeddedLogin.labels[locale].loginButton);
+	
+	//create
+	$("#create").text(EmbeddedLogin.labels[locale].createButton);
+	
+	//forgot password
+	$("#forgotpw").text(EmbeddedLogin.labels[locale].forgotPasswordLink);
+};
+
+EmbeddedLogin.getTranslation = function(label) {
+	if (EmbeddedLogin.language && EmbeddedLogin.language != "en" && EmbeddedLogin.labels[EmbeddedLogin.language]) {
+		return EmbeddedLogin.labels[EmbeddedLogin.language][label];
+	} else {
+		return EmbeddedLogin.labels[EmbeddedLogin.defaultLanguage][label];		
+	}
+};
+
+EmbeddedLogin.loadFormIfCookieExists = function() {
+	if (EmbeddedApps.cookieExists("MW_EMBEDDED") && EmbeddedLogin.getParameterByName("workflow")) {
+		var cookieValue = EmbeddedApps.getCookieValue("MW_EMBEDDED");
+		var cookieParameters = JSON.parse(cookieValue);
+		var workflow = EmbeddedLogin.getParameterByName("workflow");
+		cookieParameters.workflow = workflow;
+		if (cookieValue) {
+			EmbeddedLogin.loadParameters(cookieParameters);
+			if (workflow === 'forgot') {
+				var infoBlock = '<div id="success" class="alert alert-success"> <span class="alert_icon icon-alert-success"></span><h3>' + EmbeddedLogin.getTranslation("successLabel") + '</h3><p>' + EmbeddedLogin.getTranslation("resendEmailConfirmation") + '</p></div>';
+				$("#form_body").before(infoBlock);
+			}
+		}
+	}
+};
+
+EmbeddedLogin.buildUrl = function(path, emailAddress) {
+      var fullUrl = mathworksurl + path;
+      var delimeter = "?";
+
+      if (emailAddress) {
+        fullUrl = fullUrl + delimeter + "identifier=" + encodeURIComponent(emailAddress);
+        delimeter = "&";
+      }
+	
+	//console.log("[EMBEDDED-LOGIN] generated url: " + fullUrl);
+	return fullUrl;
+};
+
+EmbeddedLogin.buildWebUrl = function(path, returnUri, emailAddress) {
+	var fullUrl = mathworksurl + path;
+	var delimeter = "?";
+	
+	if (emailAddress) {
+		fullUrl = fullUrl + delimeter + "identifier=" + encodeURIComponent(emailAddress);
+		delimeter = "&";
+	} 
+	
+	if (returnUri) {
+		fullUrl = fullUrl + delimeter + "uri=" + encodeURIComponent(returnUri);
+	}
+
+	return fullUrl;
+};
+
+EmbeddedLogin.validateLoadData = function(loadData) {
+	if (!loadData.clientString) {
+		loadData.clientString = EmbeddedLogin.defaultClientString;
+	}
+	
+	return loadData;
+};
+
+EmbeddedLogin.clearErrors = function() {
+	$("#error").remove();
+	$("#userIdBlock").removeClass("has-feedback has-error");
+	$("#passwordBlock").removeClass("has-feedback has-error");
+};
+
+// Determine if entitlementId should be passed for auto-association.
+// For backwards compatibility, always associate unless told not to.
+EmbeddedLogin.entitlementId = function(loadData){
+	if(typeof(loadData.autoAssociate) === 'undefined' || loadData.autoAssociate){
+		return loadData.entitlementId || "";
+	}
+	return "";
+};
+
+EmbeddedLogin.buildErrorBlock = function(errorMessage) {
+	var errorBlock = '<div id="error" class="alert alert-danger"> <span class="alert_icon icon-alert-error"></span><h3>' + EmbeddedLogin.getTranslation("errorLabel") + '</h3><p>' + errorMessage + '</p></div>';
+	return errorBlock;
+};
+
+/** initialization **/
+window.addEventListener('message', EmbeddedLogin.receiver, false);
+
+$(document).ready(function(){
+	EmbeddedLogin.loadFormIfCookieExists();
+});
+
+/**jquery events **/
+$(function() {
+	
+$("#loginForm").submit(function(event) {
+	event.preventDefault();
+	
+	//clear errors
+	EmbeddedLogin.clearErrors();
+	
+	//init spinner
+	var l = Ladda.create(document.getElementById("submit"));
+ 	l.start();
+	
+	var $form = $(this),
+	  uid = $form.find("input[name='userId']").val(),
+	  pwd = $form.find("input[name='password']").val(),
+	  rememberMe = document.getElementById('rememberMe') !== null ? document.getElementById('rememberMe').checked : false,
+	  clientString = (EmbeddedLogin.inputParameters.clientString) ? EmbeddedLogin.inputParameters.clientString : "EMBDLGN";
+	
+	var loginPost = $.ajax({
+		method: "POST",
+		url: "/authenticationws/service/v2/login",
+		data: {identifier: uid, credentials: pwd, type: "MWA", profileTier: EmbeddedLogin.inputParameters.profileTier, release: EmbeddedLogin.inputParameters.release, platform: EmbeddedLogin.inputParameters.platform, entitlementId: EmbeddedLogin.entitlementId(EmbeddedLogin.inputParameters)},
+		headers: {Accept: "application/json", MW_CALLER_ID: clientString, MW_SOURCE_ID: EmbeddedLogin.inputParameters.clientID, "Accept-Language": EmbeddedLogin.locale} 
+	});
+	
+	loginPost.done(function(data, statusText, xhr){
+		//console.log("[EMBEDDED_LOGIN] successful log in");
+		//TODO: error handling
+		var responseMessage = null;
+		if (xhr.status !== 200) {
+			//Error, show error message, shouldn't be here anyway
+			//console.log("[EMBEDDED_LOGIN] " + data.message);
+		} else {
+			responseMessage = EmbeddedApps.buildSuccessResponse(data, uid, rememberMe);
+		}
+
+		//delete cookie
+		EmbeddedApps.deleteMWEmbeddedCookie();
+		//post message
+		EmbeddedApps.postMessage(responseMessage, "*");
+		//$(".container-fluid").toggle(); //don't toggle body off any more
+	});
+	
+	loginPost.fail(function(xhr, statusText, errorThrown){
+		//console.log("[EMBEDDED_LOGIN] log in failure");
+		//console.log("[EMBEDDED_LOGIN] " + xhr.status);
+		//console.log("[EMBEDDED_LOGIN] " + xhr.responseText);
+		//console.log("[EMBEDDED_LOGIN] " + statusText);
+		//console.log("[EMBEDDED_LOGIN] " + errorThrown);
+		
+		var statusCode = xhr.status;
+		var errorResponse = JSON.parse(xhr.responseText);
+		//based on status, redirect or drop in the proper error message
+		if (statusCode == 423) {
+			//console.log("[EMBEDDED_LOGIN] account locked out");
+			var errorMessage = errorResponse.errors[0].message;
+			
+			var errorBlock = EmbeddedLogin.buildErrorBlock(errorMessage);
+			$("#form_body").before(errorBlock);
+			
+			//hide form
+			$("#form_body").hide();
+			$(".form_actions").hide();
+			
+			l.stop();
+		} else if (statusCode == 412) {
+			//console.log("[EMBEDDED_LOGIN] incomplete data");
+
+			var tokenString = errorResponse.errors[0].token;
+			//console.log("[EMBEDDED_LOGIN] token found: " + tokenString);
+			EmbeddedLogin.inputParameters.token = tokenString;
+			EmbeddedApps.setDetailsAsCookie(EmbeddedLogin.inputParameters);
+			//console.log("[EMBEDDED_LOGIN] set token: " + EmbeddedLogin.inputParameters.token);
+			
+			window.location.href = EmbeddedLogin.buildUrl("/mwaccount/widgets/embedded/profiles/incomplete");
+		} else if (statusCode == 402) {
+			//console.log("[EMBEDDED_LOGIN] email unverified");
+
+			var tokenString = errorResponse.errors[0].token;
+			//console.log("[EMBEDDED_LOGIN] token found: " + tokenString);
+			EmbeddedLogin.inputParameters.token = tokenString;
+			
+			EmbeddedLogin.inputParameters.cachedUsername = uid;
+			EmbeddedApps.setDetailsAsCookie(EmbeddedLogin.inputParameters);
+			
+			if (EmbeddedLogin.inputParameters.clientString.toLowerCase().indexOf("web") == 0) {
+				window.parent.location.href = EmbeddedLogin.buildWebUrl("/mwaccount/profiles/verify", EmbeddedLogin.inputParameters.returnUri, uid);
+			} else {
+				window.location.href = EmbeddedLogin.buildUrl("/mwaccount/widgets/embedded/profiles/verify/existing");
+			}
+		} else if (statusCode == 401) {
+			//console.log("[EMBEDDED_LOGIN] authentiation failure");
+
+			var errorMessage = errorResponse.errors[0].message;
+			var errorBlock = '<div id="error" class="alert alert-danger"> <span class="alert_icon icon-alert-error"></span><h3>' + EmbeddedLogin.getTranslation("errorLabel") + '</h3><p>' + errorMessage + '</p></div>';
+			$("#form_body").before(errorBlock);
+			$("#userIdBlock").addClass("has-feedback has-error");
+			$("#passwordBlock").addClass("has-feedback has-error");
+			
+			l.stop();
+		}else {
+			//console.log("[EMBEDDED_LOGIN] other failure");
+
+			//TODO: the auth service return the proper translated error message
+			//TODO: insert the error message returned
+			var errorBlock = '<div id="error" class="alert alert-danger"> <span class="alert_icon icon-alert-error"></span><h3>' + EmbeddedLogin.getTranslation("errorLabel") + '</h3><p>' + EmbeddedLogin.getTranslation("defaultLoginError") + '</p></div>';
+			$("#form_body").before(errorBlock);
+			$("#userIdBlock").addClass("has-feedback has-error");
+			$("#passwordBlock").addClass("has-feedback has-error");
+			
+			l.stop();
+		}
+	});
+});
+
+$("#create").click(function(event) {
+	event.preventDefault();
+		
+	//save cookie
+	EmbeddedApps.setDetailsAsCookie(EmbeddedLogin.inputParameters);
+
+	window.location.href = EmbeddedLogin.buildUrl("/mwaccount/widgets/embedded/profiles/new");
+});
+
+//override error message links using class click listeners
+$(document).on("click", "a.forgot", function(event) {
+	event.preventDefault();
+	
+	//save cookie
+	EmbeddedApps.setDetailsAsCookie(EmbeddedLogin.inputParameters);
+
+      // get user-entered email address
+      var userId = $("input#userId").val();
+
+	if (EmbeddedLogin.inputParameters.clientString.toLowerCase().indexOf("web") == 0) {
+		window.parent.location.href = EmbeddedLogin.buildWebUrl("/mwaccount/profiles/password/forgot", EmbeddedLogin.inputParameters.returnUri, userId);
+	} else {
+		window.location.href = EmbeddedLogin.buildUrl("/mwaccount/widgets/embedded/profiles/password/forgot", userId);
+	}
+});
+
+$(document).on("click", "a.contact", function(event) {
+	event.preventDefault();
+	
+	//TODO: need to make sure modal header is localized
+	$.get("/embedded-login/page/content/contact_us?locale=" + EmbeddedLogin.locale, function(data) {
+	  	if (data != "Error") {
+	  		$("#contactus-modal-body").html(data);
+	  		$("#contactus-modal").modal();
+	  	}
+	}, "html");
+});
+
+$(document).on("click", "#privacy_policy_modal_link", function(event) {
+	event.preventDefault();
+	
+	//TODO: need to make sure modal header is localized
+	$.get("/embedded-login/page/content/privacy_policy?locale=" + EmbeddedLogin.locale, function(data) {
+	  	if (data != "Error") {
+	  		$("#privacy-modal-body").html(data);
+	  		$("#privacy_policy_modal").modal();
+	  	}
+	}, "html");
+});
+
+$('#privacy_policy_modal').on('shown.bs.modal', function (e) {
+
+	var form_container_height = $(".form_content_container").innerHeight();
+    var form_container_padding_top = $(".form_content_container").css("padding-top");
+    var form_actions_height = $(".form_actions").innerHeight();
+    var form_actions_padding = $(".form_actions").css("padding-bottom");
+    var modal_header_height = $("#privacy_policy_modal .modal-header").innerHeight();
+    var modal_footer_height = $("#privacy_policy_modal .modal-footer").innerHeight();
+
+    var height = form_container_height + 
+                        form_actions_height -
+                        form_container_padding_top.replace('px','') - 
+                        form_actions_padding.replace('px','') - 
+                        modal_header_height - 
+                        modal_footer_height;
+
+    $("#privacy_policy_modal .modal-body").innerHeight(height);      
+  });
+
+});
+
+/* translations */
+EmbeddedLogin.labels = {
+		"en": {
+			"title": "Log in to your MathWorks Account",
+			"usernameDescription": "Email Address or User ID",
+			"passwordDescription": "Password",
+			"forgotPasswordLink": "Forgot your Password?",
+			"rememberMeLabel": "Keep me logged in",
+			"loginButton": "Log In",
+			"createButton": "Create Account",
+			"successLabel": "Success",
+			"errorLabel": "Errors",
+			"defaultLoginError": "Unable to log in. Check the email address or user id and password.",
+			"privacyPolicy": "By clicking Log In, you agree to our <a class='add_cursor_pointer' id='privacy_policy_modal_link'>privacy policy</a>",
+			"resendEmailConfirmation": "An email has been sent to the address provided"
+		},
+		"ja": {
+			"title": "MathWorks アカウントへのログイン",
+			"usernameDescription": "メールアドレスまたはユーザー ID",
+			"passwordDescription": "パスワード",
+			"forgotPasswordLink": "パスワードをお忘れですか?",
+			"rememberMeLabel": "ログイン状態を保持する",
+			"loginButton": "ログイン",
+			"createButton": "アカウントを作成する",
+			"successLabel": "Success",
+			"errorLabel": "エラー",
+			"defaultLoginError": "ログインできません。メールアドレスまたはユーザー ID およびパスワードを確認してください。",
+			"privacyPolicy": "<a class='add_cursor_pointer' id='privacy_policy_modal_link'>プライバシー ポリシーに</a>同意いただける場合は、ログインをクリックしてください。",
+			"resendEmailConfirmation": "ご登録メールアドレスにメールをお送りしましたので、ご確認ください。"
+		},
+		"zh": {
+			"title": "登录到您的 MathWorks 帐户",
+			"usernameDescription": "电子邮件地址或用户 ID",
+			"passwordDescription": "密码",
+			"forgotPasswordLink": "忘记密码？",
+			"rememberMeLabel": "保持登录状态",
+			"loginButton": "登录",
+			"createButton": "创建帐户",
+			"successLabel": "成功",
+			"errorLabel": "错误",
+			"defaultLoginError": "无法登录。请检查电子邮件地址或用户 ID 与密码。",
+			"privacyPolicy": "通过点击登录，您同意我们的<a class='add_cursor_pointer' id='privacy_policy_modal_link'>隐私政策</a>",
+			"resendEmailConfirmation": "一封电子邮件已经发送到之前提供的地址"
+		},
+		"ko": {
+			"title": "MathWorks 계정에 로그인",
+			"usernameDescription": "이메일 주소 또는 사용자 ID",
+			"passwordDescription": "비밀 번호",
+			"forgotPasswordLink": "비밀번호를 잊으셨습니까?",
+			"rememberMeLabel": "로그인 유지",
+			"loginButton": "로그인",
+			"createButton": "계정 생성",
+			"successLabel": "완료되었습니다.",
+			"errorLabel": "오류가 발생했습니다.",
+			"defaultLoginError": "로그인할 수 없습니다. 이메일 주소 또는 사용자 ID 및 비밀 번호를 확인하십시오.",
+			"privacyPolicy": "로그인 버튼을 클릭하시면, <a class='add_cursor_pointer' id='privacy_policy_modal_link'>개인 정보 취급 방침</a>에 동의하신 것으로 간주됩니다.",
+			"resendEmailConfirmation": "이메일이 제공 한 주소로 전송되었습니다"
+		}
+	};T/�      X�X�=��X�7   P    :https://login.mathworks.com/embedded-login/js/embedded-login.js?id=201701261612 necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Content-Type: text/javascript
+Date: Tue, 04 Apr 2017 14:11:53 GMT
+Last-Modified: Fri, 03 Feb 2017 16:38:50 GMT
+Server: GlassFish Server Open Source Edition  4.1.1
+Via: 1.1 base_80
+X-Powered-By: Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1.1  Java/Oracle Corporation/1.8)
+Content-Length: 24447
+ original-response-headers Content-Type: text/javascript
+Date: Tue, 04 Apr 2017 14:11:53 GMT
+Last-Modified: Fri, 03 Feb 2017 16:38:50 GMT
+Server: GlassFish Server Open Source Edition  4.1.1
+Via: 1.1 base_80
+X-Powered-By: Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1.1  Java/Oracle Corporation/1.8)
+Content-Length: 24447
+Connection: keep-alive
+ uncompressed-len 0 net-response-time-onstart 87 net-response-time-onstop 107   _

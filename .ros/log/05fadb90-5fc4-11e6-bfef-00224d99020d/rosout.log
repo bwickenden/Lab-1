@@ -1,0 +1,12 @@
+
+
+1470920620.426294487  Node Startup
+1470920624.251715898 INFO [arbotix_driver:76(__init__) [topics: /diagnostics, /joint_states, /rosout] Started ArbotiX connection on port /dev/ttyUSB0.
+1470920624.262784957 INFO [arbotix_driver:113(__init__) [topics: /diagnostics, /joint_states, /rosout] ArbotiX connected.
+1470920856.716584920 INFO [arbotix_driver:76(__init__) [topics: /diagnostics, /joint_states, /rosout] Started ArbotiX connection on port /dev/ttyUSB0.
+1470920856.727709054 INFO [arbotix_driver:113(__init__) [topics: /diagnostics, /joint_states, /rosout] ArbotiX connected.
+1470920867.456404924 INFO [arbotix_driver:76(__init__) [topics: /diagnostics, /joint_states, /rosout] Started ArbotiX connection on port /dev/ttyUSB0.
+1470920867.467784881 INFO [arbotix_driver:113(__init__) [topics: /diagnostics, /joint_states, /rosout] ArbotiX connected.
+1470921283.458535909 INFO [joints.py:116(getJointsFromURDF) [topics: /joint_states, /rosout, /cmd_vel] No URDF defined, proceeding with defaults
+1470921353.567251920 WARN [tcpros_base.py:351(_tcp_server_callback) [topics: /diagnostics, /joint_states, /rosout] Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+1470921389.493854045 INFO [joints.py:116(getJointsFromURDF) [topics: /joint_states, /rosout, /cmd_vel] No URDF defined, proceeding with defaults

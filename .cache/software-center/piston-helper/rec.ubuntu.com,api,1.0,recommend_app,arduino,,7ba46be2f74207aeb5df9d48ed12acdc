@@ -1,0 +1,233 @@
+status: 200
+content-length: 5151
+via: 1.1 papeda.canonical.com:3128 (squid/2.7.STABLE7)
+content-location: https://rec.ubuntu.com/api/1.0/recommend_app/arduino/
+x-cache: MISS from papeda.canonical.com
+x-cache-lookup: HIT from papeda.canonical.com:3128
+expires: Thu, 11 Aug 2016 11:27:34 GMT
+server: Apache
+last-modified: Thu, 11 Aug 2016 11:22:34 GMT
+etag: "750f3e79218db8549a44cf1c9480f6bd"
+strict-transport-security: max-age=2592000
+cache-control: max-age=300
+date: Thu, 11 Aug 2016 11:22:34 GMT
+content-type: application/json; charset=utf-8
+
+{
+    "rid": "6cbc72dbb9b12b88d901f6804f9a9bd8", 
+    "data": [
+        {
+            "package_name": "geda-gschem", 
+            "similarity": 0.1274
+        }, 
+        {
+            "package_name": "eagle", 
+            "similarity": 0.1039
+        }, 
+        {
+            "package_name": "electric", 
+            "similarity": 0.0953
+        }, 
+        {
+            "package_name": "gresistor", 
+            "similarity": 0.0882
+        }, 
+        {
+            "package_name": "qt4-dev-tools", 
+            "similarity": 0.08
+        }, 
+        {
+            "package_name": "kicad", 
+            "similarity": 0.0797
+        }, 
+        {
+            "package_name": "qt4-designer", 
+            "similarity": 0.0793
+        }, 
+        {
+            "package_name": "qtcreator", 
+            "similarity": 0.0766
+        }, 
+        {
+            "package_name": "scilab", 
+            "similarity": 0.074
+        }, 
+        {
+            "package_name": "qucs", 
+            "similarity": 0.0736
+        }, 
+        {
+            "package_name": "oregano", 
+            "similarity": 0.0722
+        }, 
+        {
+            "package_name": "octave3.2", 
+            "similarity": 0.0687
+        }, 
+        {
+            "package_name": "geogebra", 
+            "similarity": 0.0642
+        }, 
+        {
+            "package_name": "librecad", 
+            "similarity": 0.0641
+        }, 
+        {
+            "package_name": "codeblocks", 
+            "similarity": 0.0636
+        }, 
+        {
+            "package_name": "idle-python2.7", 
+            "similarity": 0.0628
+        }, 
+        {
+            "package_name": "eclipse-platform", 
+            "similarity": 0.0614
+        }, 
+        {
+            "package_name": "spyder", 
+            "similarity": 0.0613
+        }, 
+        {
+            "package_name": "qtoctave", 
+            "similarity": 0.0604
+        }, 
+        {
+            "package_name": "winpdb", 
+            "similarity": 0.0591
+        }, 
+        {
+            "package_name": "wxmaxima", 
+            "similarity": 0.0576
+        }, 
+        {
+            "package_name": "glade", 
+            "similarity": 0.0567
+        }, 
+        {
+            "package_name": "monodevelop", 
+            "similarity": 0.0557
+        }, 
+        {
+            "package_name": "blender", 
+            "similarity": 0.0534
+        }, 
+        {
+            "package_name": "geany", 
+            "similarity": 0.0523
+        }, 
+        {
+            "package_name": "gelemental", 
+            "similarity": 0.0512
+        }, 
+        {
+            "package_name": "glade-gtk2", 
+            "similarity": 0.0504
+        }, 
+        {
+            "package_name": "freemat", 
+            "similarity": 0.05
+        }, 
+        {
+            "package_name": "wireshark", 
+            "similarity": 0.0498
+        }, 
+        {
+            "package_name": "qelectrotech", 
+            "similarity": 0.0491
+        }, 
+        {
+            "package_name": "kicad-common", 
+            "similarity": 0.049
+        }, 
+        {
+            "package_name": "emacs23", 
+            "similarity": 0.048
+        }, 
+        {
+            "package_name": "devhelp", 
+            "similarity": 0.0479
+        }, 
+        {
+            "package_name": "dia-gnome", 
+            "similarity": 0.0476
+        }, 
+        {
+            "package_name": "lyx", 
+            "similarity": 0.0467
+        }, 
+        {
+            "package_name": "leds", 
+            "similarity": 0.046
+        }, 
+        {
+            "package_name": "basic256", 
+            "similarity": 0.0459
+        }, 
+        {
+            "package_name": "celestia-gnome", 
+            "similarity": 0.0452
+        }, 
+        {
+            "package_name": "bluefish", 
+            "similarity": 0.0441
+        }, 
+        {
+            "package_name": "calibre", 
+            "similarity": 0.0436
+        }, 
+        {
+            "package_name": "netbeans", 
+            "similarity": 0.0435
+        }, 
+        {
+            "package_name": "bzr", 
+            "similarity": 0.0434
+        }, 
+        {
+            "package_name": "python-wxglade", 
+            "similarity": 0.0434
+        }, 
+        {
+            "package_name": "gitg", 
+            "similarity": 0.0432
+        }, 
+        {
+            "package_name": "texmaker", 
+            "similarity": 0.0429
+        }, 
+        {
+            "package_name": "dosbox", 
+            "similarity": 0.0427
+        }, 
+        {
+            "package_name": "stellarium", 
+            "similarity": 0.0423
+        }, 
+        {
+            "package_name": "kiki", 
+            "similarity": 0.0417
+        }, 
+        {
+            "package_name": "scribus", 
+            "similarity": 0.0417
+        }, 
+        {
+            "package_name": "kile", 
+            "similarity": 0.0417
+        }, 
+        {
+            "rating": 4.0, 
+            "package_name": "xoscope"
+        }, 
+        {
+            "rating": 4.0, 
+            "package_name": "jftp"
+        }, 
+        {
+            "rating": 3.0, 
+            "package_name": "moserial"
+        }
+    ], 
+    "app": "arduino"
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<title>Downloads &#8211; PyGaze</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.pygaze.org/xmlrpc.php" />
+<link rel="shortcut icon" href="http://www.pygaze.org/wp-content/uploads/2015/06/eyeicon.ico" /><link rel="apple-touch-icon" href="http://www.pygaze.org/wp-content/uploads/2015/06/eyeicon.ico" /><link rel="alternate" type="application/rss+xml" title="PyGaze &raquo; Feed" href="http://www.pygaze.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="PyGaze &raquo; Comments Feed" href="http://www.pygaze.org/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.pygaze.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.10"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-css'  href='http://www.pygaze.org/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=2.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tempera-fonts-css'  href='http://www.pygaze.org/wp-content/themes/tempera/fonts/fontfaces.css?ver=4.2.10' type='text/css' media='all' />
+<link rel='stylesheet' id='tempera-style-css'  href='http://www.pygaze.org/wp-content/themes/tempera/style.css?ver=4.2.10' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.pygaze.org/wp-includes/js/jquery/jquery.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://www.pygaze.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.7.1","is_admin":"0","ajaxurl":"http:\/\/www.pygaze.org\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.pygaze.org/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=2.7.1'></script>
+<script type='text/javascript' src='http://www.pygaze.org/wp-content/themes/tempera/js/frontend.js?ver=4.2.10'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.pygaze.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.pygaze.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.2.10" />
+<link rel='canonical' href='http://www.pygaze.org/downloads/' />
+<link rel='shortlink' href='http://www.pygaze.org/?p=15' />
+<style type="text/css"> #header, #main, #topbar-inner { max-width: 1150px; } #container.one-column { } #container.two-columns-right #secondary { width:250px; float:right; } #container.two-columns-right #content { width:810px; float:left; } /*fallback*/ #container.two-columns-right #content { width:calc(100% - 280px); float:left; } #container.two-columns-left #primary { width:250px; float:left; } #container.two-columns-left #content { width:810px; float:right; } /*fallback*/ #container.two-columns-left #content { width:-moz-calc(100% - 280px); float:right; width:-webkit-calc(100% - 280px); width:calc(100% - 280px); } #container.three-columns-right .sidey { width:125px; float:left; } #container.three-columns-right #primary { margin-left:30px; margin-right:30px; } #container.three-columns-right #content { width:780px; float:left; } /*fallback*/ #container.three-columns-right #content { width:-moz-calc(100% - 310px); float:left; width:-webkit-calc(100% - 310px); width:calc(100% - 310px);} #container.three-columns-left .sidey { width:125px; float:left; } #container.three-columns-left #secondary {margin-left:30px; margin-right:30px; } #container.three-columns-left #content { width:780px; float:right;} /*fallback*/ #container.three-columns-left #content { width:-moz-calc(100% - 310px); float:right; width:-webkit-calc(100% - 310px); width:calc(100% - 310px); } #container.three-columns-sided .sidey { width:125px; float:left; } #container.three-columns-sided #secondary { float:right; } #container.three-columns-sided #content { width:780px; float:right; /*fallback*/ width:-moz-calc(100% - 310px); float:right; width:-webkit-calc(100% - 310px); float:right; width:calc(100% - 310px); float:right; margin: 0 155px 0 -1090px; } body { font-family: Ubuntu; } #content h1.entry-title a, #content h2.entry-title a, #content h1.entry-title , #content h2.entry-title { font-family: Ubuntu; } .widget-title, .widget-title a { line-height: normal; font-family: Ubuntu; } .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, #comments #reply-title, .nivo-caption h2, #front-text1 h1, #front-text2 h1, .column-header-image { font-family: Ubuntu; } #site-title span a { font-family: Ubuntu; } #access ul li a, #access ul li a span { font-family: Ubuntu; } body { color: #2e3436; background-color: #eeeeec } a { color: #73d216; } a:hover,.entry-meta span a:hover, .comments-link a:hover { color: #4e9a06; } #header { background-color: ; } #site-title span a { color:#4e9a06; } #site-description { color:#2e3436; background-color: rgba(211,215,207,0.3); padding-left: 6px; } .socials a { background-color: #4e9a06; } .socials-hover { background-color: #73d216; } /* Main menu top level */ #access a, #nav-toggle span { color: #d3d7cf; } #access, #nav-toggle {background-color: #2e3436; } #access > .menu > ul > li > a > span { border-color: #101618; -moz-box-shadow: 1px 0 0 #464c4e; -webkit-box-shadow: 1px 0 0 #464c4e; box-shadow: 1px 0 0 #464c4e; } #access a:hover {background-color: #3b4143; } #access ul li.current_page_item > a, #access ul li.current-menu-item > a, #access ul li.current_page_ancestor > a, #access ul li.current-menu-ancestor > a { background-color: #3b4143; } /* Main menu Submenus */ #access > .menu > ul > li > ul:before {border-bottom-color:#2e3436;} #access ul ul ul:before { border-right-color:#2e3436;} #access ul ul li { background-color:#2e3436; border-top-color:#3c4244; border-bottom-color:#23292b} #access ul ul li a{color:#d3d7cf} #access ul ul li a:hover{background:#3c4244} #access ul ul li.current_page_item > a, #access ul ul li.current-menu-item > a, #access ul ul li.current_page_ancestor > a, #access ul ul li.current-menu-ancestor > a { background-color:#3c4244; } #topbar { background-color: #4e9a06;border-bottom-color:#76c22e; box-shadow:3px 0 3px #267200; } .topmenu ul li a { color: #d3d7cf; } .topmenu ul li a:hover { color: #eeeeec; border-bottom-color: #c4a000; } #main { background-color: #eeeeec; } #author-info, #entry-author-info, .page-title { border-color: #c4a000; background: #eeeeec; } #entry-author-info #author-avatar, #author-info #author-avatar { border-color: #d3d7cf; } .sidey .widget-container { color: #2e3436; background-color: #eeeeec; } .sidey .widget-title { color: #2e3436; background-color: #d3d7cf;border-color:#abafa7;} .sidey .widget-container a {color:;} .sidey .widget-container a:hover {color:;} .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 { color: #2e3436; } .sticky .entry-header {border-color:#c4a000 } .entry-title, .entry-title a { color: #2e3436; } .entry-title a:hover { color: #2e3436; } #content h3.entry-format { color: #d3d7cf; background-color: #2e3436; } #footer { color: #888a85; background-color: ; } #footer2 { color: #888a85; background-color: ; } #footer a { color: ; } #footer a:hover { color: ; } #footer2 a, .footermenu ul li:after { color: ; } #footer2 a:hover { color: ; } #footer .widget-container { color: #2e3436; background-color: #eeeeec; } #footer .widget-title { color: #2e3436; background-color: #d3d7cf;border-color:#abafa7 } a.continue-reading-link, #cryout_ajax_more_trigger { color:#d3d7cf !important; background:#2e3436; border-bottom-color:#c4a000; } a.continue-reading-link:after { background-color:#edd400; } a.continue-reading-link i.icon-right-dir {color:#c4a000} a.continue-reading-link:hover i.icon-right-dir {color:#edd400} .page-link a, .page-link > span > em {border-color:#d3d7cf} .columnmore a {background:#edd400;color:#eeeeec} .columnmore a:hover {background:#c4a000;} .file, .button, #respond .form-submit input#submit, input[type=submit], input[type=reset] { background-color: #eeeeec; border-color: #d3d7cf; box-shadow: 0 -10px 10px 0 #eeeeec inset; } .file:hover, .button:hover, #respond .form-submit input#submit:hover { background-color: #eeeeec; } .entry-content tr th, .entry-content thead th { color: #2e3436; } .entry-content fieldset, #content tr td,#content tr th, #content thead th { border-color: #d3d7cf; } #content tr.even td { background-color: #eeeeec !important; } hr { background-color: #d3d7cf; } input[type="text"], input[type="password"], input[type="email"], input[type="file"], textarea, select, input[type="color"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="month"],input[type="number"],input[type="range"], input[type="search"],input[type="tel"],input[type="time"],input[type="url"],input[type="week"] { background-color: #eeeeec; border-color: #d3d7cf #d3d7cf #d3d7cf #d3d7cf; color: #2e3436; } input[type="submit"], input[type="reset"] { color: #2e3436; background-color: #eeeeec; border-color: #d3d7cf; box-shadow: 0 -10px 10px 0 #eeeeec inset; } input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover, textarea:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="range"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover { background-color: rgba(238,238,236,0.4); } .entry-content code { border-color: #d3d7cf; border-bottom-color:#c4a000;} .entry-content pre { border-color: #d3d7cf; background-color:#eeeeec;} .entry-content blockquote { border-color: #d3d7cf; } abbr, acronym { border-color: #2e3436; } .comment-meta a { color: #2e3436; } #respond .form-allowed-tags { color: #555753; } .reply a{ background-color: #eeeeec; border-color: #d3d7cf; } .reply a:hover { background-color: #2e3436;color: #73d216; } .entry-meta .icon-metas:before {color:#4e9a06;} .entry-meta span a, .comments-link a {color:#4e9a06;} .entry-meta span a:hover, .comments-link a:hover {color:;} .nav-next a:hover {} .nav-previous a:hover { } .pagination { border-color:#e4e4e2;} .pagination span, .pagination a { background:#eeeeec; border-left-color:#d4d4d2; border-right-color:#fefefc; } .pagination a:hover { background: #f6f6f4; } #searchform input[type="text"] {color:#555753;} .caption-accented .wp-caption { background-color:rgba(196,160,0,0.8); color:#eeeeec} .tempera-image-one .entry-content img[class*='align'],.tempera-image-one .entry-summary img[class*='align'], .tempera-image-two .entry-content img[class*='align'],.tempera-image-two .entry-summary img[class*='align'] { border-color:#c4a000;} #content p, #content ul, #content ol, #content, #frontpage blockquote { text-align:Default ; } #content p, #content ul, #content ol, .sidey, .sidey a, table, table td { font-size:17px; word-spacing:Default; letter-spacing:Default; } #content p, #content ul, #content ol, .sidey, .sidey a { line-height:1.7em; } #content h1.entry-title, #content h2.entry-title { font-size:34px ;} .widget-title, .widget-title a { font-size:20px ;} #content .entry-content h1 { font-size: 38px;} #content .entry-content h2 { font-size: 34px;} #content .entry-content h3 { font-size: 29px;} #content .entry-content h4 { font-size: 24px;} #content .entry-content h5 { font-size: 19px;} #content .entry-content h6 { font-size: 14px;} #site-title span a { font-size:50px ;} #access ul li a { font-size:17px ;} #access ul ul ul a {font-size:15px;} .nocomments, .nocomments2 {display:none;} #header-container > div { margin:40px 0 0 0px;} #content p, #content ul, #content ol, #content dd, #content pre, #content hr { margin-bottom: 1.0em; } #nav-toggle { text-align: left; } #toTop {background:#eeeeec;margin-left:1300px;} #toTop:hover .icon-back2top:before {color:#edd400;} #main {margin-top:0px; } #forbottom {margin-left: 30px; margin-right: 30px;} #header-widget-area { width: 33%; } #branding { height:120px; } </style> 
+<style type="text/css">/* Tempera Custom CSS */</style>
+<link rel='stylesheet' id='tempera_style_mobile'  href='http://www.pygaze.org/wp-content/themes/tempera/styles/style-mobile.css' type='text/css' media='all' /><script type="text/javascript">var cryout_global_content_width = 900;var cryout_toTop_offset = 1150;</script><!--[if lt IE 9]>
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+</script>
+<![endif]-->
+<script type="text/javascript">
+function makeDoubleDelegate(function1, function2) {
+	/* concatenate functions */
+    return function() { if (function1) function1(); if (function2) function2(); }
+}
+
+function tempera_onload() {
+    /* Add responsive videos */
+    jQuery(".entry-content").fitVids();
+	}; // tempera_onload
+
+jQuery(document).ready(function(){
+	/* enable mobile menu handle */
+	tempera_mobilemenu_init();
+});
+
+// make sure not to lose previous onload events
+window.onload = makeDoubleDelegate(window.onload, tempera_onload );
+</script>
+</head>
+<body class="page page-id-15 page-template-default tempera-image-one caption-dark">
+
+
+<div id="wrapper" class="hfeed">
+<div id="topbar" ><div id="topbar-inner"> <div class="socials" id="sheader">
+			<a  target="_blank"  rel="nofollow" href="https://twitter.com/esdalmaijer"
+			class="socialicons social-Twitter" title="Twitter">
+				<img alt="Twitter" src="http://www.pygaze.org/wp-content/themes/tempera/images/socials/Twitter.png" />
+			</a>
+			<a  target="_blank"  rel="nofollow" href="https://www.youtube.com/channel/UCj0NwNonAZ4m9PxKrN5Jmqw"
+			class="socialicons social-YouTube" title="YouTube">
+				<img alt="YouTube" src="http://www.pygaze.org/wp-content/themes/tempera/images/socials/YouTube.png" />
+			</a>
+			<a  target="_blank"  rel="nofollow" href="https://scholar.google.co.uk/citations?user=DQ7gW-gAAAAJ&#038;hl=en"
+			class="socialicons social-AboutMe" title="Google Scholar">
+				<img alt="AboutMe" src="http://www.pygaze.org/wp-content/themes/tempera/images/socials/AboutMe.png" />
+			</a></div> </div></div>
+<div class="socials" id="srights">
+			<a  target="_blank"  rel="nofollow" href="https://twitter.com/esdalmaijer"
+			class="socialicons social-Twitter" title="Twitter">
+				<img alt="Twitter" src="http://www.pygaze.org/wp-content/themes/tempera/images/socials/Twitter.png" />
+			</a>
+			<a  target="_blank"  rel="nofollow" href="https://www.youtube.com/channel/UCj0NwNonAZ4m9PxKrN5Jmqw"
+			class="socialicons social-YouTube" title="YouTube">
+				<img alt="YouTube" src="http://www.pygaze.org/wp-content/themes/tempera/images/socials/YouTube.png" />
+			</a>
+			<a  target="_blank"  rel="nofollow" href="https://scholar.google.co.uk/citations?user=DQ7gW-gAAAAJ&#038;hl=en"
+			class="socialicons social-AboutMe" title="Google Scholar">
+				<img alt="AboutMe" src="http://www.pygaze.org/wp-content/themes/tempera/images/socials/AboutMe.png" />
+			</a></div>
+<div id="header-full">
+	<header id="header">
+		<div id="masthead">
+			<div id="branding" role="banner" >
+				<div id="header-container">
+<div><div id="site-title"><span> <a href="http://www.pygaze.org/" title="PyGaze" rel="home">PyGaze</a> </span></div><div id="site-description" >Open source eye-tracking software and more.</div></div></div>								<div style="clear:both;"></div>
+			</div><!-- #branding -->
+			<a id="nav-toggle"><span>&nbsp;</span></a>
+			<nav id="access" role="navigation">
+				<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+<div class="menu"><ul id="prime_nav" class="menu"><li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="http://www.pygaze.org/about/"><span>About</span></a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-15 current_page_item menu-item-28"><a href="http://www.pygaze.org/downloads/"><span>Downloads</span></a></li>
+<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="http://www.pygaze.org/installation/"><span>Installation</span></a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://www.pygaze.org/docs/"><span>Documentation</span></a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="http://www.pygaze.org/contributors/"><span>Contributors</span></a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://www.pygaze.org/contact/"><span>Contact</span></a></li>
+<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-31"><a href="http://www.pygaze.org/blog/"><span>Blog</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-61" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-61"><a href="http://www.pygaze.org/category/eyetracking/"><span>eye tracking</span></a></li>
+	<li id="menu-item-62" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62"><a href="http://www.pygaze.org/category/programming/"><span>programming</span></a></li>
+	<li id="menu-item-64" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="http://www.pygaze.org/category/research/"><span>research</span></a></li>
+	<li id="menu-item-65" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65"><a href="http://www.pygaze.org/category/software/"><span>software</span></a></li>
+	<li id="menu-item-63" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="http://www.pygaze.org/category/random/"><span>random</span></a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->		
+		</div><!-- #masthead -->
+	</header><!-- #header -->
+</div><!-- #header-full -->
+
+<div style="clear:both;height:0;"> </div>
+
+<div id="main">
+		<div id="toTop"><i class="icon-back2top"></i> </div>	<div  id="forbottom" >
+		
+		<div style="clear:both;"> </div>
+
+				<section id="container" class="two-columns-right">
+
+			<div id="content" role="main">
+			<div class="breadcrumbs"><a href="http://www.pygaze.org"><i class="icon-homebread"></i></a><i class='icon-angle-right'></i> Downloads</div>
+				
+				<div id="post-15" class="post-15 page type-page status-publish hentry">
+											<h1 class="entry-title">Downloads</h1>
+					
+					<div class="entry-content">
+						<p>On this page, you can find all available PyGaze packages and PyGaze installation instructions. For instructions on downloading Python and all of PyGaze&#8217;s dependencies, please look <a href="http://www.pygaze.org/installation/">here</a>.
+</p>
+<p><H2>Windows</H2></p>
+<p><H3>Complete portable environment</H3></p>
+<p>We have modified the awesome <a href="http://code.google.com/p/winpython/">WinPython</a> portable Python environment to work with PyGaze and it&#8217;s dependencies. The cool part of this type of environment, is that you do not need to install it. Simply <a href="http://www.pygaze.org/resources/downloads/WinPython-PyGaze-0.5.1.zip">download</a> the package, unzip it to a location of your choice, and voil&#224;! A running, fully functional version of Python 2.7, including all PyGaze dependencies and some nifty tools, like the excellent <a href="http://code.google.com/p/spyderlib/">Spyder</a> code editor. You can even put it on a USB stick or an external hard drive (hence the term &#8216;portable&#8217;), allowing you to carry your own Python platform around (VERY useful for computers on which you do not want or can install anything!).
+</p>
+<ul>
+<li><a href="http://www.pygaze.org/resources/downloads/WinPython-PyGaze-0.5.1.zip">WinPython PyGaze 0.5.1</a></li>
+<li><a href="http://www.pygaze.org/resources/downloads/WinPython-PyGaze-0.4.zip">WinPython PyGaze 0.4</a> (older version)</li>
+</ul>
+<p><H3>PyGaze package</H3></p>
+<p>Open a Command Prompt, and run the following command:
+</p>
+<p><code>pip install python-pygaze</code>
+</p>
+<p>This will automatically install PyGaze in your default Python installation by using <b>pip</b>, an awesome package manager for Python.
+</p>
+<p><H2>Linux</H2></p>
+<p>Open a terminal, and run the following command:
+</p>
+<p><code>pip install python-pygaze</code>
+</p>
+<p><H2>Mac OS X</H2></p>
+<p>Open a terminal, and run the following command:
+</p>
+<p><code>pip install python-pygaze</code>
+</p>
+<p><H2>Source</H2></p>
+<p>Please note that the PyGaze source code is also available via <a href="https://github.com/esdalmaijer/PyGaze">GitHub</a>, where you can participate in active development.</p>
+<p><H3>Installing the source code</H3></p>
+<ol>
+<li>Download the package of your choice (choose from the downloads below)</li>
+<li>Unzip the downloaded package</li>
+<li>Extra step if you downloaded from GitHub: copy the <i>resources</i> folder into the <i>pygaze</i> folder</li>
+<li>Copy or move the unzipped <i>pygaze</i> folder to Python&#8217;s site-packages directory (on Windows: <i>C:\Python27\Lib\site-packages</i>; on Linux: <i>usr/lib/pymodules</i>)</li>
+<li>Test if the installation was a success, by opening a Python interpreter and typing: <code>import pygaze</code></li>
+</ol>
+						<div style="clear:both;"></div>
+																	</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+
+				 <div id="comments" class="hideme">  <p class="nocomments2">Comments are closed</p> </div><!-- #comments -->
+
+						</div><!-- #content -->
+					<div id="secondary" class="widget-area sidey" role="complementary">
+		
+			<ul class="xoxo">
+								<li id="text-2" class="widget-container widget_text"><h3 class="widget-title">Tweet this page</h3>			<div class="textwidget"><a href="https://twitter.com/share" class="twitter-share-button" data-via="esdalmaijer" data-size="large" data-dnt="true">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<br>
+<a href="https://twitter.com/esdalmaijer" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @esdalmaijer</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+		</li><li id="search-3" class="widget-container widget_search"><h3 class="widget-title">Search this website</h3> 
+<form method="get" id="searchform"
+action="http://www.pygaze.org//">
+<input type="text" value="Search"
+name="s" id="s"
+onblur="if (this.value == '')
+{this.value = 'Search';}"
+onfocus="if (this.value == 'Search')
+{this.value = '';}" />
+<input type="submit" id="searchsubmit" value="&#xe816;" />
+</form></li>		<li id="recent-posts-3" class="widget-container widget_recent_entries">		<h3 class="widget-title">Recent blog posts</h3>		<ul>
+					<li>
+				<a href="http://www.pygaze.org/2016/09/cancer-during-your-phd-sucks/">Cancer during your PhD? Sucks!</a>
+						</li>
+					<li>
+				<a href="http://www.pygaze.org/2016/03/the-downsides-of-open-science-that-nobody-talks-about/">The downsides of open science that nobody talks about</a>
+						</li>
+					<li>
+				<a href="http://www.pygaze.org/2016/03/how-to-code-twitter-bot/">Tutorial: creating a Twitterbot</a>
+						</li>
+					<li>
+				<a href="http://www.pygaze.org/2016/03/sigmund-freud-twitter-bot/">Sigmund Freud Twitter Bot</a>
+						</li>
+					<li>
+				<a href="http://www.pygaze.org/2016/02/apologies-for-the-downtime/">Apologies for the downtime</a>
+						</li>
+				</ul>
+		</li>			</ul>
+
+			
+		</div>
+		</section><!-- #container -->
+
+
+	<div style="clear:both;"></div>
+	</div> <!-- #forbottom -->
+
+
+	<footer id="footer" role="contentinfo">
+		<div id="colophon">
+		
+			
+			
+		</div><!-- #colophon -->
+
+		<div id="footer2">
+		
+			<div id="site-copyright">Copyright E.S. Dalmaijer (2013-2016)</div><div class="socials" id="sfooter">
+			<a  target="_blank"  rel="nofollow" href="https://twitter.com/esdalmaijer"
+			class="socialicons social-Twitter" title="Twitter">
+				<img alt="Twitter" src="http://www.pygaze.org/wp-content/themes/tempera/images/socials/Twitter.png" />
+			</a>
+			<a  target="_blank"  rel="nofollow" href="https://www.youtube.com/channel/UCj0NwNonAZ4m9PxKrN5Jmqw"
+			class="socialicons social-YouTube" title="YouTube">
+				<img alt="YouTube" src="http://www.pygaze.org/wp-content/themes/tempera/images/socials/YouTube.png" />
+			</a>
+			<a  target="_blank"  rel="nofollow" href="https://scholar.google.co.uk/citations?user=DQ7gW-gAAAAJ&#038;hl=en"
+			class="socialicons social-AboutMe" title="Google Scholar">
+				<img alt="AboutMe" src="http://www.pygaze.org/wp-content/themes/tempera/images/socials/AboutMe.png" />
+			</a></div>	<span style="display:block;float:right;text-align:right;padding:5px 20px 5px;text-transform:uppercase;font-size:11px;">
+	Powered by <a target="_blank" href="http://www.cryoutcreations.eu" title="Tempera Theme by Cryout Creations">Tempera</a> &amp; <a target="_blank" href="http://wordpress.org/"
+			title="Semantic Personal Publishing Platform">  WordPress.		</a>
+	</span><!-- #site-info -->
+				
+		</div><!-- #footer2 -->
+
+	</footer><!-- #footer -->
+
+	</div><!-- #main -->
+</div><!-- #wrapper -->
+
+
+<script type='text/javascript' src='http://www.pygaze.org/wp-includes/js/comment-reply.min.js?ver=4.2.10'></script>
+
+</body>
+</html>
+£“×fËè      XÊl©XÊl©=‹‡•       !    :http://www.pygaze.org/downloads/ necko:classified 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Fri, 18 Nov 2016 15:16:44 GMT
+Server: Apache
+X-Powered-By: PHP/5.6.28
+X-Pingback: http://www.pygaze.org/xmlrpc.php
+Link: <http://www.pygaze.org/?p=15>; rel=shortlink
+Content-Type: text/html; charset=UTF-8
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 17 predictor::http://www.pygaze.org/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=2.7.1 1,2,1489661097,4096 predictor::http://www.pygaze.org/wp-content/themes/tempera/fonts/fontfaces.css?ver=4.2.10 1,2,1489661097,4096 predictor::http://www.pygaze.org/wp-content/themes/tempera/style.css?ver=4.2.10 1,2,1489661097,4096 predictor::http://www.pygaze.org/wp-includes/js/jquery/jquery.js?ver=1.11.2 1,2,1489661097,4096 predictor::http://www.pygaze.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1 1,2,1489661097,4096 predictor::http://www.pygaze.org/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=2.7.1 1,2,1489661097,4096 predictor::http://www.pygaze.org/wp-content/themes/tempera/js/frontend.js?ver=4.2.10 1,2,1489661097,4096 predictor::http://www.pygaze.org/wp-includes/js/wp-emoji-release.min.js?ver=4.2.10 1,2,1489661097,4096 predictor::http://www.pygaze.org/wp-content/themes/tempera/styles/style-mobile.css 1,2,1489661097,4096 predictor::http://www.pygaze.org/wp-includes/js/comment-reply.min.js?ver=4.2.10 1,2,1489661097,4096 predictor::http://platform.twitter.com/widgets.js 1,2,1489661097,4096 predictor::https://platform.twitter.com/js/button.5546439b5d743401ca910708312f6e81.js 1,2,1489661097,4096 predictor::http://www.pygaze.org/wp-content/themes/tempera/images/socials/Twitter.png 1,1,1489661097,4096 predictor::http://www.pygaze.org/wp-content/themes/tempera/images/socials/YouTube.png 1,1,1489661097,4096 predictor::http://www.pygaze.org/wp-content/themes/tempera/images/socials/AboutMe.png 1,1,1489661097,4096 predictor::http://www.pygaze.org/wp-content/themes/tempera/fonts/ubuntu-regular-webfont.woff 1,1,1489661097,4096 predictor::http://www.pygaze.org/wp-content/themes/tempera/fonts/elusive.woff 1,1,1489661097,4096   mÉ

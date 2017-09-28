@@ -1,0 +1,21 @@
+[rosmaster.main][INFO] 2017-09-26 15:23:26,908: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2017-09-26 15:23:26,909: Starting ROS Master Node
+[xmlrpc][INFO] 2017-09-26 15:23:26,909: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2017-09-26 15:23:26,910: Started XML-RPC server [http://SMB303Lab:11311/]
+[rosmaster.master][INFO] 2017-09-26 15:23:26,910: Master initialized: port[11311], uri[http://SMB303Lab:11311/]
+[xmlrpc][INFO] 2017-09-26 15:23:26,910: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2017-09-26 15:23:26,946: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2017-09-26 15:23:26,947: +PARAM [/roslaunch/uris/host_smb303lab__37565] by /roslaunch
+[rosmaster.master][INFO] 2017-09-26 15:23:27,003: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2017-09-26 15:23:27,003: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2017-09-26 15:23:27,303: +SERVICE [/rosout/get_loggers] /rosout http://SMB303Lab:44781/
+[rosmaster.master][INFO] 2017-09-26 15:23:27,304: +SERVICE [/rosout/set_logger_level] /rosout http://SMB303Lab:44781/
+[rosmaster.master][INFO] 2017-09-26 15:23:27,306: +PUB [/rosout_agg] /rosout http://SMB303Lab:44781/
+[rosmaster.master][INFO] 2017-09-26 15:23:27,309: +SUB [/rosout] /rosout http://SMB303Lab:44781/
+[rosmaster.master][INFO] 2017-09-26 15:41:33,634: -PUB [/rosout_agg] /rosout http://SMB303Lab:44781/
+[rosmaster.master][INFO] 2017-09-26 15:41:33,635: -SUB [/rosout] /rosout http://SMB303Lab:44781/
+[rosmaster.master][INFO] 2017-09-26 15:41:33,635: -SERVICE [/rosout/get_loggers] /rosout rosrpc://SMB303Lab:48951
+[rosmaster.master][INFO] 2017-09-26 15:41:33,636: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://SMB303Lab:48951
+[rosmaster.main][INFO] 2017-09-26 15:41:33,744: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2017-09-26 15:41:33,745: stopping master...
+[rospy.core][INFO] 2017-09-26 15:41:33,745: signal_shutdown [atexit]

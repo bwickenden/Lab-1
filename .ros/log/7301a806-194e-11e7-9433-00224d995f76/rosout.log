@@ -1,0 +1,4 @@
+
+
+1491321043.952397258  Node Startup
+1491321077.221297983 INFO [/tmp/binarydeb/ros-kinetic-rviz-1.12.4/src/rviz/ogre_helpers/render_system.cpp:431(RenderWindow* rviz::RenderSystem::makeRenderWindow) [topics: /rosout] Stereo is NOT SUPPORTED
