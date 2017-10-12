@@ -10,16 +10,27 @@ Line Breaks: This is the same as Block quotes but creates a new line on the same
 Linux
 
 Command Lines: 
-++$Ls                                          // Lists directory contents ++
-++$cd/temp                                    // Moves to the temp directory++
+
+$Ls                                          // Lists directory contents 
+
+$cd/temp                                    // Moves to the temp directory
+
 $cd $Home                                  // Takes you to the user dircetory
+
 $mkdir                                    // Creates Directories
+
 $echo "Hello" > hello.md                 // Echo Display Line of Text
+
 $cat hello.md                           // Print Standard Output
+
 $cp hello.md hello-again.md            // Copies Files/directories
+
 $mv hello-again.md                    // Move Files/Rename**
+
 $rm hello.md                         // Remove files/directories
+
 $ rm-rf                             // Bad things... Ver Bad Things...
+
 $cat/proc/cpuinfo                  // Display CPU Information
 
 
