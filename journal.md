@@ -10,8 +10,8 @@ Line Breaks: This is the same as Block quotes but creates a new line on the same
 Linux
 
 Command Lines: 
-⋅⋅⋅$Ls                                          // Lists directory contents
-⋅⋅⋅$cd/temp                                    // Moves to the temp directory⋅⋅⋅
+$Ls                                          // Lists directory contents *same paragraph*
+$cd/temp                                    // Moves to the temp directory*same paragraph*
 $cd $Home                                  // Takes you to the user dircetory
 $mkdir                                    // Creates Directories
 $echo "Hello" > hello.md                 // Echo Display Line of Text
